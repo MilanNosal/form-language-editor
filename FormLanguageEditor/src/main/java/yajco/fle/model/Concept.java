@@ -1,8 +1,5 @@
 package yajco.fle.model;
 
-import java.util.List;
-import java.util.Set;
-
 /**
  *
  * @author DeeL
