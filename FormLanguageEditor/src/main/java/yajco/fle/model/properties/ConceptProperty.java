@@ -8,7 +8,13 @@ import yajco.fle.model.Property;
  * @author Milan
  */
 public class ConceptProperty extends Property {
-    private Concept concept;
+
+    private final Concept concept;
+
+    public ConceptProperty(String name, Concept concept) {
+        super(name);
+        this.concept = concept;
+    }
 
     public Concept getConcept() {
         return concept;

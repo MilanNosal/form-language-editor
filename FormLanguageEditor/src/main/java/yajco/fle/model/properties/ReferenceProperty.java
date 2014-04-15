@@ -8,9 +8,16 @@ import yajco.fle.model.Property;
  * @author Milan
  */
 public class ReferenceProperty extends Property {
-    private Concept concept;
-    
-    private Property refId;
+
+    private final Concept concept;
+
+    private final Property refId;
+
+    public ReferenceProperty(String name, Concept concept, Property refId) {
+        super(name);
+        this.concept = concept;
+        this.refId = refId;
+    }
 
     public Concept getConcept() {
         return concept;

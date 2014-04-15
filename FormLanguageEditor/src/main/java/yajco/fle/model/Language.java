@@ -1,6 +1,5 @@
 package yajco.fle.model;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -8,13 +7,18 @@ import java.util.List;
  * @author DeeL
  */
 public class Language {
-    List<Concept> concepts = new ArrayList<>();
+
+    private final List<Concept> concepts;
+
+    public Language(List<Concept> concepts) {
+        this.concepts = concepts;
+    }
 
     public List<Concept> getConcepts() {
         return concepts;
     }
-    
-    public Concept getBaseConcept() {
+
+    public Concept getMainConcept() {
         return concepts.get(0);
     }
 }

@@ -7,5 +7,7 @@ import yajco.fle.model.Property;
  * @author Milan
  */
 public class IntegerProperty extends Property {
-    
+    public IntegerProperty(String name) {
+        super(name);
+    }
 }
