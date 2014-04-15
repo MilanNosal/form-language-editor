@@ -1,10 +1,12 @@
 package yajco.fle.model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author DeeL
  */
-public abstract class Concept {
+public abstract class Concept extends BaseSourceElement<yajco.model.Concept> implements Serializable{
 
     private final String name;
 
@@ -14,7 +16,7 @@ public abstract class Concept {
         this.name = name;
         this.className = className;
     }
-
+    
     public String getName() {
         return name;
     }

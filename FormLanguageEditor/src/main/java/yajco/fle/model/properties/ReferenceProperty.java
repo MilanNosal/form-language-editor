@@ -26,4 +26,10 @@ public class ReferenceProperty extends Property {
     public Property getRefId() {
         return refId;
     }
+
+    @Override
+    public String toString() {
+        return "ReferenceProperty {concept:"+concept.getName()+" | refId:"+refId.getName()+"}";
+    }
+    
 }

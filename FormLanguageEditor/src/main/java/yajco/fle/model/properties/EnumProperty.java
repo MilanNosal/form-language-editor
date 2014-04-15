@@ -11,9 +11,12 @@ import yajco.fle.model.Property;
 public class EnumProperty extends Property {
 
     private final Set<String> constants;
+    
+    private final String className;
 
-    public EnumProperty(String name, Set<String> constants) {
+    public EnumProperty(String name, String className, Set<String> constants) {
         super(name);
+        this.className = className;
         this.constants = constants;
     }
 
@@ -21,4 +24,8 @@ public class EnumProperty extends Property {
         return constants;
     }
 
+    public String getClassName() {
+        return className;
+    }
+    
 }

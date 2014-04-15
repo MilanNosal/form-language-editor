@@ -1,5 +1,6 @@
 package yajco.fle.model;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -18,4 +19,10 @@ public class ConcreteConcept extends Concept {
     public List<Property> getProperties() {
         return properties;
     }
+
+    @Override
+    public String toString() {
+        return "\n\tconcreteConcept "+this.getName()+" {"+Arrays.toString(properties.toArray())+"}";
+    }
+    
 }
