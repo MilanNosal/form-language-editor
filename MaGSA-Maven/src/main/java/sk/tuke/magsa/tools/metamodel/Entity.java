@@ -12,13 +12,13 @@ public class Entity implements Named {
     @Identifier
     private final String name;
 
-    private final Property[] properties;
+    private final List<Property> properties;
 
     private final List<Reference> outgoingReferences = new ArrayList<Reference>();
 
     @Before("entity")
     public Entity(String name,
-            @Before("{") @After("}") @Range(minOccurs = 1) Property[] properties) {
+            @Before("{") @After("}") @Range(minOccurs = 1) List<Property> properties) {
         this.name = name;
         this.properties = properties;
     }
@@ -27,7 +27,7 @@ public class Entity implements Named {
         return name;
     }
 
-    public Property[] getProperties() {
+    public List<Property> getProperties() {
         return properties;
     }
 
@@ -40,8 +40,8 @@ public class Entity implements Named {
         return null;
     }
 
-    public Reference[] getOutgoingReferences() {
-        return outgoingReferences.toArray(new Reference[]{});
+    public List<Reference> getOutgoingReferences() {
+        return outgoingReferences;
     }
 
     public void addOutgoingReference(Reference reference) {
@@ -59,6 +59,6 @@ public class Entity implements Named {
 
     @Override
     public String toString() {
-        return "entity " + name + " " + Arrays.toString(properties) + " outgoing references " + outgoingReferences;
+        return "entity " + name + " " + Arrays.toString(properties.toArray()) + " outgoing references " + Arrays.toString(outgoingReferences.toArray());
     }
 }

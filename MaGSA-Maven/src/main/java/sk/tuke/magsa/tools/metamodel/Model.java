@@ -1,29 +1,30 @@
 package sk.tuke.magsa.tools.metamodel;
 
 import java.util.Arrays;
+import java.util.List;
 import sk.tuke.magsa.tools.metamodel.ui.UI;
 import yajco.annotation.Exclude;
 import yajco.annotation.Range;
 
 public class Model {
-    private final Entity[] entities;
+    private final List<Entity> entities;
 
     private UI ui;
 
-    private final Reference[] references;
+    private final List<Reference> references;
 
-    public Model(@Range(minOccurs = 1) Entity[] entities, Reference[] references) {
+    public Model(@Range(minOccurs = 1) List<Entity> entities, List<Reference> references) {
         this.entities = entities;
         this.references = references;
     }
 
     @Exclude
-    public Model(Entity[] entities) {
+    public Model(List<Entity> entities) {
         this.entities = entities;
         this.references = null;
     }
 
-    public Entity[] getEntities() {
+    public List<Entity> getEntities() {
         return entities;
     }
 
@@ -44,12 +45,12 @@ public class Model {
         this.ui = ui;
     }
 
-    public Reference[] getReferences() {
+    public List<Reference> getReferences() {
         return references;
     }
 
     @Override
     public String toString() {
-        return "model " + Arrays.toString(entities) + " " + Arrays.toString(references) + " " + ui;
+        return "model " + Arrays.toString(entities.toArray()) + " " + Arrays.toString(references.toArray()) + " " + ui;
     }
 }
