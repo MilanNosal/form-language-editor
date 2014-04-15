@@ -10,16 +10,11 @@ import java.util.Set;
  * @author DeeL
  */
 public class Concept {
-    private Set<Concept> directSubtypes = new HashSet<Concept>();
     
     private List<Property> properties = new ArrayList<>();
     
     private String languageModelClassName;
-
-    public Set<Concept> getDirectSubtypes() {
-        return directSubtypes;
-    }
-
+    
     public List<Property> getProperties() {
         return properties;
     }
