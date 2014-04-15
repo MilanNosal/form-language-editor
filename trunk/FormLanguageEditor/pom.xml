@@ -10,4 +10,20 @@
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
     </properties>
+    
+    <repositories>
+        <repository>
+            <id>sonatype-snapshot</id>
+            <name>sonatype-snapshot</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>sk.tuke.yajco</groupId>
+            <artifactId>yajco-generator-tools</artifactId>
+            <version>0.5.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 </project>
