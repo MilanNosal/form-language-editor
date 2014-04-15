@@ -1,13 +1,14 @@
 package sk.tuke.magsa.tools.metamodel.constraints;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class EntityRef {
 
     private final String name;
-    private final PropertyRef[] properties;
+    private final List<PropertyRef> properties;
 
-    public EntityRef(String name, PropertyRef... properties) {
+    public EntityRef(String name, List<PropertyRef> properties) {
         this.name = name;
         this.properties = properties;
     }
@@ -16,12 +17,12 @@ public class EntityRef {
         return name;
     }
 
-    public PropertyRef[] getProperties() {
+    public List<PropertyRef> getProperties() {
         return properties;
     }
 
     @Override
     public String toString() {
-        return "entity_ref " + name + " " + Arrays.toString(properties);
+        return "entity_ref " + name + " " + Arrays.toString(properties.toArray());
     }
 }

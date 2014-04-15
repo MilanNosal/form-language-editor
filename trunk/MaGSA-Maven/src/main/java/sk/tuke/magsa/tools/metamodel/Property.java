@@ -1,6 +1,7 @@
 package sk.tuke.magsa.tools.metamodel;
 
 import java.util.Arrays;
+import java.util.List;
 import sk.tuke.magsa.tools.metamodel.constraints.Constraint;
 import yajco.annotation.Before;
 import yajco.annotation.Exclude;
@@ -13,11 +14,11 @@ public class Property implements Named {
 
     private final Type type;
 
-    private Constraint[] constraints;
+    private List<Constraint> constraints;
 
     public Property(String name,
             @Before(":") Type type,
-            @Separator(",") Constraint[] constraints) {
+            @Separator(",") List<Constraint> constraints) {
         this.name = name;
         this.type = type;
         this.constraints = constraints;
@@ -37,11 +38,11 @@ public class Property implements Named {
         return type;
     }
 
-    public Constraint[] getConstraints() {
+    public List<Constraint> getConstraints() {
         return constraints;
     }
 
-    public void setConstraints(Constraint[] constraints) {
+    public void setConstraints(List<Constraint> constraints) {
         this.constraints = constraints;
     }
 
@@ -63,6 +64,6 @@ public class Property implements Named {
 
     @Override
     public String toString() {
-        return name + ":" + type + " constraints " + Arrays.toString(constraints);
+        return name + ":" + type + " constraints " + Arrays.toString(constraints.toArray());
     }
 }
