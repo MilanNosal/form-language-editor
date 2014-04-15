@@ -9,11 +9,10 @@ import yajco.model.Language;
  *
  * @author DeeL
  */
-public class Generator implements FilesGenerator{
+public class PanelsGenerator implements FilesGenerator {
 
     @Override
     public void generateFiles(Language language, Filer filer, Properties properties) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
 }
