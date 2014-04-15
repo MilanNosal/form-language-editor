@@ -24,13 +24,12 @@ public class test extends javax.swing.JFrame {
         list.addAll(Arrays.asList(MojEnum.values()));
         contentPanel.add(new ReferenceTypePanel(list));
         
-        ButtonPanelTest<MojEnum> bp = new ButtonPanelTest<>();
+        DirectConceptPanel<MojEnum> dcp = new DirectConceptPanel<>(new EnumPanel(MojEnum.class));
+        contentPanel.add(dcp);
         
-        contentPanel.add(bp);
+        ListPanel lp = new ListPanel(new RealPanel(), new RealPanel());
         
-        //ListPanel lp = new ListPanel(new RealPanel(), new RealPanel());
-        
-        //contentPanel.add(lp);
+        contentPanel.add(lp);
     }
 
     @SuppressWarnings("unchecked")
