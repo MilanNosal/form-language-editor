@@ -8,12 +8,15 @@ import yajco.fle.model.Property;
  * @author Milan
  */
 public class ListProperty extends Property {
-    
-    
-    private Concept componentType;
+
+    private final Concept componentType;
+
+    public ListProperty(String name, Concept componentType) {
+        super(name);
+        this.componentType = componentType;
+    }
 
     public Concept getComponentType() {
         return componentType;
     }
-    
 }
