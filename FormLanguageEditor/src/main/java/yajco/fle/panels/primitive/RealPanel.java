@@ -99,7 +99,6 @@ public class RealPanel extends javax.swing.JPanel implements PanelAccessor<Doubl
             if (inputOK) {
                 return true;
             } else {
-                Toolkit.getDefaultToolkit().beep();
                 return false;
             }
         }
