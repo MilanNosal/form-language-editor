@@ -19,4 +19,10 @@ public class ListProperty extends Property {
     public Concept getComponentType() {
         return componentType;
     }
+
+    @Override
+    public String toString() {
+        return "listProperty[innerType:"+componentType.getName()+"]";
+    }
+    
 }
