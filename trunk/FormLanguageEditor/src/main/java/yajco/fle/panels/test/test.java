@@ -1,8 +1,8 @@
 package yajco.fle.panels.test;
 
-import yajco.fle.panels.EnumPanel;
-import yajco.fle.panels.primitive.IntegerPanel;
-import yajco.fle.panels.primitive.RealPanel;
+import java.util.*;
+import yajco.fle.panels.*;
+import yajco.fle.panels.primitive.*;
 
 /** @author Michaela Bačíková */
 public class test extends javax.swing.JFrame {
@@ -14,28 +14,47 @@ public class test extends javax.swing.JFrame {
         contentPanel.add(new RealPanel());
         contentPanel.add(new IntegerPanel());
         contentPanel.add(new IntegerPanel());
+        
+        contentPanel.add(new BooleanPanel());
+        contentPanel.add(new StringPanel());
+        
         contentPanel.add(new EnumPanel(MojEnum.class));
+        
+        List<MojEnum> list = new ArrayList<>();
+        list.addAll(Arrays.asList(MojEnum.values()));
+        contentPanel.add(new ReferenceTypePanel(list));
+        
+        ListPanel lp = new ListPanel(new RealPanel(), new RealPanel());
+        
+        contentPanel.add(lp);
     }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
         contentPanel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        contentPanel.setLayout(new java.awt.GridLayout(1, 0));
+        jScrollPane1.setViewportView(contentPanel);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(contentPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(contentPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -75,6 +94,7 @@ public class test extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel contentPanel;
+    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 
 }

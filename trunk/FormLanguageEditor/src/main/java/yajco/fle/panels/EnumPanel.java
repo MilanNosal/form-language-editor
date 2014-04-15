@@ -61,7 +61,7 @@ public class EnumPanel <T extends Enum<T>> extends javax.swing.JPanel implements
 
     @Override
     public void setLabel(String label) {
-        //zatial nic
+        enumCmbbx.setName(label);
     }
 
     @Override

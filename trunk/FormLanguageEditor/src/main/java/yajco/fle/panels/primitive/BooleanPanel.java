@@ -19,9 +19,9 @@ public class BooleanPanel extends javax.swing.JPanel implements PanelAccessor<Bo
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        booleanComponent = new javax.swing.JCheckBox();
+        booleanChckbx = new javax.swing.JCheckBox();
 
-        booleanComponent.setText("Boolean value text");
+        booleanChckbx.setText("Boolean value text");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -29,45 +29,45 @@ public class BooleanPanel extends javax.swing.JPanel implements PanelAccessor<Bo
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(booleanComponent)
+                .addComponent(booleanChckbx)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(booleanComponent)
+                .addComponent(booleanChckbx)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JCheckBox booleanComponent;
+    private javax.swing.JCheckBox booleanChckbx;
     // End of variables declaration//GEN-END:variables
 
     @Override
     public void setValue(Boolean value) {
-        booleanComponent.setSelected(value);
+        booleanChckbx.setSelected(value);
     }
 
     @Override
     public Boolean getValue() {
-        return booleanComponent.isSelected();
+        return booleanChckbx.isSelected();
     }
 
     @Override
     public void reset() {
-        booleanComponent.setSelected(false);
+        booleanChckbx.setSelected(false);
     }
 
     @Override
     public void setLabel(String label) {
-        booleanComponent.setText(label);
+        booleanChckbx.setName(label);
     }
 
     @Override
     public void setDescription(String description) {
-        booleanComponent.setToolTipText(description);
+        booleanChckbx.setToolTipText(description);
     }
 }

@@ -64,7 +64,7 @@ public class IntegerPanel extends javax.swing.JPanel implements PanelAccessor<In
 
     @Override
     public void setLabel(String label) {
-        //zatial nic
+        integerFrmttdTxtfld.setName(label);
     }
 
     @Override
