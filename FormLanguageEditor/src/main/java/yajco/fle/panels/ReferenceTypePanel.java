@@ -1,65 +1,68 @@
-package yajco.fle.panels.primitive;
+package yajco.fle.panels;
 
-import yajco.fle.panels.PanelAccessor;
+import java.util.List;
+import javax.swing.DefaultComboBoxModel;
 
 /** @author Michaela Bačíková */
-public class StringPanel extends javax.swing.JPanel implements PanelAccessor<String> {
+public class ReferenceTypePanel <T> extends javax.swing.JPanel implements PanelAccessor<T> {
 
-    public StringPanel() {
+    public ReferenceTypePanel(List<T> values) {
         initComponents();
+        
+        valuesCmbbx.setModel(new DefaultComboBoxModel(values.toArray()));
     }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        stringTxtfld = new javax.swing.JTextField();
+        valuesCmbbx = new javax.swing.JComboBox();
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(stringTxtfld, javax.swing.GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE)
+                .addComponent(valuesCmbbx, 0, 230, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(stringTxtfld, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(valuesCmbbx, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField stringTxtfld;
+    private javax.swing.JComboBox valuesCmbbx;
     // End of variables declaration//GEN-END:variables
 
     @Override
-    public void setValue(String value) {
-        stringTxtfld.setText(value);
+    public void setValue(T value) {
+        valuesCmbbx.setSelectedItem(value);
     }
 
     @Override
-    public String getValue() {
-        return stringTxtfld.getText();
+    public T getValue() {
+        return (T) valuesCmbbx.getSelectedItem();
     }
 
     @Override
     public void reset() {
-        stringTxtfld.setText("");
+        valuesCmbbx.setSelectedIndex(0);
     }
 
     @Override
     public void setLabel(String label) {
-        stringTxtfld.setName(label);
+        valuesCmbbx.setName(label);
     }
 
     @Override
     public void setDescription(String description) {
-        stringTxtfld.setToolTipText(description);
+        valuesCmbbx.setToolTipText(description);
     }
 }

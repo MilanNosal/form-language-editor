@@ -70,7 +70,7 @@ public class RealPanel extends javax.swing.JPanel implements PanelAccessor<Doubl
 
     @Override
     public void setLabel(String label) {
-        //zatial nic
+        realFrmttdTxtfld.setName(label);
     }
 
     @Override
