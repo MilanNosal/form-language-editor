@@ -1,0 +1,7 @@
+    public $panelName() {
+#foreach ( $property in $concept.properties)
+        this.${property.name}.setLabel("${property.label}");
+        this.${property.name}.setDescription("${property.label}");
+        addProperty("${property.label}", this.${property.name});
+#end
+    }

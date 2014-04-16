@@ -3,14 +3,4 @@
 ## potom treba napravit
 ##
 
-    // <editor-fold defaultstate="collapsed" desc="Properties declarations">
-#foreach ( $property in $concept.properties)
-#set( $file = $templatesDir + "body/properties/declarations/" + $property.getClass().getSimpleName() + ".vsl" )
-#parse( $file )
-#end
-    // </editor-fold>
-
-// TODO konstruktor + pridanie ale nezabudntut nastavit label a desc miskinym panelom
-
-#set( $file = $templatesDir + "body/properties/PanelAccessorImplementation.vsl" )
-#parse( $file )
+    // TODO

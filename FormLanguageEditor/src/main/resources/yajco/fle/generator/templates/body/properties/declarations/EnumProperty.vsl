@@ -1,2 +1,2 @@
     private final PanelAccessor<$property.getTypeName()> $property.name
-                                = new EnumPanel<>(${property.getTypeName()}.class);
+                                = new yajco.fle.panels.EnumPanel<$property.getTypeName()>(${property.getTypeName()}.class);

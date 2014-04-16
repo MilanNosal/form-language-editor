@@ -1,1 +1,1 @@
-    private final PanelAccessor<String> $property.name = new StringPanel();
+    private final PanelAccessor<String> $property.name = new yajco.fle.panels.primitive.StringPanel();

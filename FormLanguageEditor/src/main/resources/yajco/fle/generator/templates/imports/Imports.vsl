@@ -2,9 +2,4 @@
 // TODO: prepare a real base
 import prototyped.ConceptPanelBase;
 import yajco.fle.panels.PanelAccessor;
-
-#foreach($class in $generator.getPanelClasses($concept))
-#set( $file = $templatesDir + "imports/panels/" + $class.getSimpleName() + ".vsl" )
-#parse( $file )
-#end
 // </editor-fold>

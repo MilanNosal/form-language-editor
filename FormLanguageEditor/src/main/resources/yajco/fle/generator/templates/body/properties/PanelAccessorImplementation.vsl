@@ -1,4 +1,3 @@
-    // <editor-fold defaultstate="collapsed" desc="PanelAccessor interface implementation (differs between abstract and concrete concepts)">
     @Override
     public void setValue($domainClass value) {
 #foreach($property in $concept.properties)
@@ -10,7 +9,11 @@
     public $domainClass getValue() {
         return new $domainClass(
 #foreach($property in $concept.properties)
+#if ($property.getClass().getSimpleName().equals("ReferenceProperty") )
+                    null#if($velocityHasNext),#end
+#else
                     this.${property.name}.getValue()#if($velocityHasNext),#end
+#end
 
 #end
         );
@@ -32,4 +35,3 @@
     public void setDescription(String description) {
         System.err.println("Setting description on $panelName is not supported.");
     }
-    // </editor-fold>
