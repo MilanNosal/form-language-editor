@@ -1,2 +1,2 @@
-    private final PanelAccessor<List<$property.getDomainTypeName()>> $property.name 
-                                = new ListPanel<>(new ${property.concept.name}Panel(), new ${property.concept.name}Panel());
+    private final PanelAccessor<List<$property.getTypeName()>> $property.name 
+                                = new ListPanel<>(new ${property.componentType.name}Panel(), new ${property.componentType.name}Panel());

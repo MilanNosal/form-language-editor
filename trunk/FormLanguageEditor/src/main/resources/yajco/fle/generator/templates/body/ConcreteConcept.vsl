@@ -7,4 +7,5 @@
 
 // TODO konstruktor + pridanie ale nezabudntut nastavit label a desc miskinym panelom
 
-// TODO PanelAccessor implementation
+#set( $file = $templatesDir + "body/properties/PanelAccessorImplementation.vsl" )
+#parse( $file )

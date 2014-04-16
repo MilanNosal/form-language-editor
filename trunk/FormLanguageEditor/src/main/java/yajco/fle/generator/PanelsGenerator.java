@@ -17,13 +17,11 @@ import java.util.Set;
 import javax.annotation.processing.Filer;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
-import yajco.fle.model.AbstractConcept;
 import yajco.fle.model.Concept;
 import yajco.fle.model.ConcreteConcept;
 import yajco.fle.model.Property;
 import yajco.fle.model.properties.ConceptProperty;
 import yajco.fle.model.properties.ListProperty;
-import yajco.fle.model.properties.interfaces.HasType;
 import yajco.fle.model.properties.primitives.IntegerProperty;
 import yajco.fle.model.properties.primitives.StringProperty;
 import yajco.generator.FilesGenerator;
@@ -69,22 +67,6 @@ public class PanelsGenerator implements FilesGenerator {
 
     }
 
-    public Set<String> getDomainProperties(Concept concept) {
-        Set<String> retVal = new HashSet<>();
-        if (concept instanceof ConcreteConcept) {
-            for (Property property : ((ConcreteConcept) concept).getProperties()) {
-                if (property instanceof HasType) {
-                    retVal.add(((HasType) property).getTypeName());
-                }
-            }
-        } else if (concept instanceof AbstractConcept) {
-            for (Concept subType : ((AbstractConcept) concept).getDirectSubtypes()) {
-                retVal.add(subType.getClassName());
-            }
-        }
-        return retVal;
-    }
-
     public Set<Class> getPanelClasses(Concept concept) {
         Set<Class> retVal = new HashSet<>();
         if (concept instanceof ConcreteConcept) {
@@ -95,9 +77,17 @@ public class PanelsGenerator implements FilesGenerator {
         return retVal;
     }
     
+    public String toUCIdent(String ident) {
+        return Character.toUpperCase(ident.charAt(0)) + ident.substring(1);
+    }
+
+    public String toLCIdent(String ident) {
+        return Character.toLowerCase(ident.charAt(0)) + ident.substring(1);
+    }
+    
     /**
      * Vystrihnutie mena konceptu, ktore potom pouzivam pre pracu vdaka
-     * mennym konvenciam.
+     * mennym konvenciam. Teda uvidim ci pouzijem, zatial asi ani nie.
      * @param property
      * @return 
      */
