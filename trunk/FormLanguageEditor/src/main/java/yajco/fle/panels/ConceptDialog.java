@@ -10,7 +10,7 @@ public class ConceptDialog extends javax.swing.JDialog {
     private boolean okPressed = false;
     private final PanelAccessor content;
 
-    public ConceptDialog(java.awt.Frame parent, PanelAccessor content) {
+    public ConceptDialog(java.awt.Frame parent, AbstractAccessiblePanel content) {
         super(parent, true);
         initComponents();
 
