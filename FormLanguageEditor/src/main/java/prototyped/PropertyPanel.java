@@ -1,5 +1,6 @@
 package prototyped;
 
+import yajco.fle.panels.ConceptPanelBase;
 import prototyped.model.Constraint;
 import prototyped.model.Property;
 import yajco.fle.panels.ConceptPanel;
@@ -10,7 +11,7 @@ import yajco.fle.panels.primitive.StringPanel;
  *
  * @author Milan
  */
-public class PropertyPanel extends ConceptPanelBase implements PanelAccessor<Property>{
+public class PropertyPanel extends ConceptPanelBase<Property>{
     private final PanelAccessor<String> name = new StringPanel();
     private final PanelAccessor<Constraint> constraint = new ConceptPanel<>(new ConstraintPanel());
     

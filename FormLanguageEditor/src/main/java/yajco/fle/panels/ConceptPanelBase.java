@@ -1,14 +1,14 @@
-package prototyped;
+package yajco.fle.panels;
 
 import java.awt.Label;
 import javax.swing.JPanel;
-import yajco.fle.panels.PanelAccessor;
 
 /**
  *
  * @author Milan
+ * @param <T> type 
  */
-public class ConceptPanelBase extends javax.swing.JPanel {
+public abstract class ConceptPanelBase <T> extends javax.swing.JPanel implements PanelAccessor<T> {
 
     /**
      * Creates new form ConceptPanelBase
