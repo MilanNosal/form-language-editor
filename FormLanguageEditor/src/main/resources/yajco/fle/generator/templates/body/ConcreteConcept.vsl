@@ -1,0 +1,11 @@
+// <editor-fold defaultstate="collapsed" desc="Properties declarations">
+#foreach($property in $concept.properties)
+    private final PanelAccessor<$generator.> min = new IntegerPanel();
+#end
+    private final PanelAccessor<Integer> min = new IntegerPanel();
+    private final PanelAccessor<Integer> max = new IntegerPanel();
+// </editor-fold>
+
+// TODO konstruktor
+
+// TODO PanelAccessor implementation

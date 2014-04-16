@@ -23,7 +23,7 @@ import yajco.fle.model.ConcreteConcept;
 import yajco.fle.model.Property;
 import yajco.fle.model.properties.ConceptProperty;
 import yajco.fle.model.properties.ListProperty;
-import yajco.fle.model.properties.interfaces.DomainProperty;
+import yajco.fle.model.properties.interfaces.DomainType;
 import yajco.fle.model.properties.primitives.IntegerProperty;
 import yajco.fle.model.properties.primitives.StringProperty;
 import yajco.generator.FilesGenerator;
@@ -42,8 +42,6 @@ public class PanelsGenerator implements FilesGenerator {
     @Override
     public void generateFiles(Language language, Filer filer, Properties properties) {
         yajco.fle.model.Language lang = createDummy(); //YajcoModelToLocalModelTransformator.transform(language);
-
-        System.out.println(">>>>> hellow");
 
         try {
             String path = TEMPLATE_PACKAGE + "/" + template + ".java.vsl";
@@ -75,8 +73,8 @@ public class PanelsGenerator implements FilesGenerator {
         Set<String> retVal = new HashSet<>();
         if (concept instanceof ConcreteConcept) {
             for (Property property : ((ConcreteConcept) concept).getProperties()) {
-                if (property instanceof DomainProperty) {
-                    retVal.add(((DomainProperty) property).getDomainClassName());
+                if (property instanceof DomainType) {
+                    retVal.add(((DomainType) property).getDomainTypeName());
                 }
             }
         } else if (concept instanceof AbstractConcept) {
@@ -95,6 +93,17 @@ public class PanelsGenerator implements FilesGenerator {
             }
         }
         return retVal;
+    }
+    
+    /**
+     * Vystrihnutie mena konceptu, ktore potom pouzivam pre pracu vdaka
+     * mennym konvenciam.
+     * @param property
+     * @return 
+     */
+    public String getPropertyTypeName(Property property) {
+        String propSimpleName = property.getClass().getSimpleName();
+        return propSimpleName.substring(0, propSimpleName.length() - 8);
     }
 
     public PanelsGenerator() {
@@ -115,7 +124,7 @@ public class PanelsGenerator implements FilesGenerator {
         properties.add(new StringProperty("name"));
         properties.add(new ListProperty("properties", property));
         Concept entity = new ConcreteConcept("Entity", "prototyped.model.Entity", properties);
-
+        
         List<Concept> concepts = new ArrayList<>();
         concepts.add(entity);
         concepts.add(property);
