@@ -14,7 +14,7 @@ import yajco.fle.panels.primitive.StringPanel;
 public class EntityPanel extends ConceptPanelBase implements PanelAccessor<Entity> {
     
     private final PanelAccessor<String> name = new StringPanel();
-    private final PanelAccessor<List<Property>> properties = new ListPanel<Property>(new PropertyPanel(), new PropertyPanel());
+    private final PanelAccessor<List<Property>> properties = new ListPanel<>(new PropertyPanel(), new PropertyPanel());
     
     public EntityPanel() {
         addProperty("name", name);

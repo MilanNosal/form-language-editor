@@ -23,7 +23,7 @@ import yajco.fle.model.ConcreteConcept;
 import yajco.fle.model.Property;
 import yajco.fle.model.properties.ConceptProperty;
 import yajco.fle.model.properties.ListProperty;
-import yajco.fle.model.properties.interfaces.DomainType;
+import yajco.fle.model.properties.interfaces.HasType;
 import yajco.fle.model.properties.primitives.IntegerProperty;
 import yajco.fle.model.properties.primitives.StringProperty;
 import yajco.generator.FilesGenerator;
@@ -73,8 +73,8 @@ public class PanelsGenerator implements FilesGenerator {
         Set<String> retVal = new HashSet<>();
         if (concept instanceof ConcreteConcept) {
             for (Property property : ((ConcreteConcept) concept).getProperties()) {
-                if (property instanceof DomainType) {
-                    retVal.add(((DomainType) property).getDomainTypeName());
+                if (property instanceof HasType) {
+                    retVal.add(((HasType) property).getTypeName());
                 }
             }
         } else if (concept instanceof AbstractConcept) {

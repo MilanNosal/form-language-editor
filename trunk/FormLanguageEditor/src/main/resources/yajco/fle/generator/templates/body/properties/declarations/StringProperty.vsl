@@ -1,0 +1,1 @@
+    private final PanelAccessor<String> $property.name = new StringPanel();

@@ -12,7 +12,7 @@ import yajco.fle.panels.primitive.StringPanel;
  */
 public class PropertyPanel extends ConceptPanelBase implements PanelAccessor<Property>{
     private final PanelAccessor<String> name = new StringPanel();
-    private final PanelAccessor<Constraint> constraint = new ConceptPanel<Constraint>(new ConstraintPanel());
+    private final PanelAccessor<Constraint> constraint = new ConceptPanel<>(new ConstraintPanel());
     
     public PropertyPanel() {
         addProperty("name", name);

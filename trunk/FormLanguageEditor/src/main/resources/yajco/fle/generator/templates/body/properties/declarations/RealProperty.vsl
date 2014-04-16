@@ -1,0 +1,1 @@
+    private final PanelAccessor<Double> $property.name = new RealPanel();

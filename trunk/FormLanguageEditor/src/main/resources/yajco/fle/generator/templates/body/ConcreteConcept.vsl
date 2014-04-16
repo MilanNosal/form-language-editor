@@ -1,11 +1,10 @@
-// <editor-fold defaultstate="collapsed" desc="Properties declarations">
-#foreach($property in $concept.properties)
-    private final PanelAccessor<$generator.> min = new IntegerPanel();
+    // <editor-fold defaultstate="collapsed" desc="Properties declarations">
+#foreach ( $property in $concept.properties)
+#set( $file = $templatesDir + "body/properties/declarations/" + $property.getClass().getSimpleName() + ".vsl" )
+#parse( $file )
 #end
-    private final PanelAccessor<Integer> min = new IntegerPanel();
-    private final PanelAccessor<Integer> max = new IntegerPanel();
-// </editor-fold>
+    // </editor-fold>
 
-// TODO konstruktor
+// TODO konstruktor + pridanie ale nezabudntut nastavit label a desc miskinym panelom
 
 // TODO PanelAccessor implementation
