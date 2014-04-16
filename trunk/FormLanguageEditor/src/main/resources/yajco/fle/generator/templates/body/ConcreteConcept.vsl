@@ -1,3 +1,6 @@
+
+public class $panelName extends ConcreteConceptPanelBase<$domainClass> {
+
     // <editor-fold defaultstate="collapsed" desc="Properties declarations">
 #foreach ( $property in $concept.properties)
 #set( $file = $templatesDir + "body/properties/declarations/" + $property.getClass().getSimpleName() + ".vsl" )
@@ -14,3 +17,5 @@
 #set( $file = $templatesDir + "body/properties/PanelAccessorImplementation.vsl" )
 #parse( $file )
     // </editor-fold>
+
+}

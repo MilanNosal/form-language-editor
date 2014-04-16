@@ -1,6 +1,6 @@
 package prototyped;
 
-import yajco.fle.panels.ConceptPanelBase;
+import yajco.fle.panels.ConcreteConceptPanelBase;
 import prototyped.model.Constraint;
 import yajco.fle.panels.PanelAccessor;
 import yajco.fle.panels.primitive.IntegerPanel;
@@ -9,7 +9,7 @@ import yajco.fle.panels.primitive.IntegerPanel;
  *
  * @author Milan
  */
-public class ConstraintPanel extends ConceptPanelBase<Constraint> {
+public class ConstraintPanel extends ConcreteConceptPanelBase<Constraint> {
 
     private final PanelAccessor<Integer> min = new IntegerPanel();
     private final PanelAccessor<Integer> max = new IntegerPanel();

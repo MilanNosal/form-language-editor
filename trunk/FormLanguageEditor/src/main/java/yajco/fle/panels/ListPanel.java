@@ -11,10 +11,10 @@ public class ListPanel <T> extends AbstractAccessiblePanel<List<T>> {
     private final DefaultListModel listModel;
     
     // TODO: naco dva rozne panely toho isteho typu?
-    private final ConceptPanelBase addPanel;
-    private final ConceptPanelBase editPanel;
+    private final ConcreteConceptPanelBase addPanel;
+    private final ConcreteConceptPanelBase editPanel;
     
-    public ListPanel(ConceptPanelBase addPanel, ConceptPanelBase editPanel) {
+    public ListPanel(ConcreteConceptPanelBase addPanel, ConcreteConceptPanelBase editPanel) {
         this.addPanel = addPanel;
         this.editPanel = editPanel;
         //model sa na list nastavi v initComponents
