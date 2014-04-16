@@ -1,17 +1,19 @@
 package yajco.fle.panels;
 
-/** @author Michaela Bačíková */
+/**
+ * @author Michaela Bačíková
+ */
 public class ConceptDialog extends javax.swing.JDialog {
 
     private boolean okPressed = false;
-    private ConceptPanelBase content;
-    
+    private final ConceptPanelBase content;
+
     public ConceptDialog(java.awt.Frame parent, ConceptPanelBase content) {
         super(parent, true);
         initComponents();
-        
+
         this.content = content;
-        
+
         contentPanel.add(content);
     }
 
@@ -27,17 +29,7 @@ public class ConceptDialog extends javax.swing.JDialog {
 
         setModal(true);
 
-        javax.swing.GroupLayout contentPanelLayout = new javax.swing.GroupLayout(contentPanel);
-        contentPanel.setLayout(contentPanelLayout);
-        contentPanelLayout.setHorizontalGroup(
-            contentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        contentPanelLayout.setVerticalGroup(
-            contentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
+        contentPanel.setLayout(new java.awt.BorderLayout());
         getContentPane().add(contentPanel, java.awt.BorderLayout.CENTER);
 
         okButton.setText("OK");
@@ -66,7 +58,7 @@ public class ConceptDialog extends javax.swing.JDialog {
         buttonPanelLayout.setHorizontalGroup(
             buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, buttonPanelLayout.createSequentialGroup()
-                .addContainerGap(205, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(okButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(resetButton)
@@ -77,7 +69,7 @@ public class ConceptDialog extends javax.swing.JDialog {
         buttonPanelLayout.setVerticalGroup(
             buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, buttonPanelLayout.createSequentialGroup()
-                .addContainerGap(266, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(okButton)
                     .addComponent(resetButton)
@@ -85,13 +77,13 @@ public class ConceptDialog extends javax.swing.JDialog {
                 .addContainerGap())
         );
 
-        getContentPane().add(buttonPanel, java.awt.BorderLayout.PAGE_END);
+        getContentPane().add(buttonPanel, java.awt.BorderLayout.SOUTH);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void okButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_okButtonActionPerformed
-       okPressed = true;
+        okPressed = true;
     }//GEN-LAST:event_okButtonActionPerformed
 
     private void resetButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetButtonActionPerformed
@@ -99,16 +91,11 @@ public class ConceptDialog extends javax.swing.JDialog {
     }//GEN-LAST:event_resetButtonActionPerformed
 
     private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
-        // PanelManager.getInstance().hide(this);
         setVisible(false);
     }//GEN-LAST:event_cancelButtonActionPerformed
 
-    @Override
-    public void show() {
-        this.setVisible(true);
-    }
-
-    public boolean isOkPressed() {
+    public boolean showDialog() {
+        setVisible(true);
         return okPressed;
     }
 
