@@ -22,9 +22,9 @@ public class test extends javax.swing.JFrame {
         
         List<MojEnum> list = new ArrayList<>();
         list.addAll(Arrays.asList(MojEnum.values()));
-        contentPanel.add(new ReferenceTypePanel(list));
+        contentPanel.add(new ReferencePanel(list));
         
-        DirectConceptPanel<MojEnum> dcp = new DirectConceptPanel<>(new EnumPanel(MojEnum.class));
+        ConceptPanel<MojEnum> dcp = new ConceptPanel<>(new EnumPanel(MojEnum.class));
         contentPanel.add(dcp);
         
         ListPanel lp = new ListPanel(new RealPanel(), new RealPanel());

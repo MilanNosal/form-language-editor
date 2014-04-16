@@ -1,5 +1,6 @@
 package yajco.fle.model.properties;
 
+import yajco.fle.model.properties.interfaces.DomainProperty;
 import yajco.fle.model.Concept;
 import yajco.fle.model.Property;
 
@@ -7,7 +8,7 @@ import yajco.fle.model.Property;
  *
  * @author Milan
  */
-public class ConceptProperty extends Property {
+public class ConceptProperty extends Property implements DomainProperty {
 
     private final Concept concept;
 
@@ -18,5 +19,10 @@ public class ConceptProperty extends Property {
 
     public Concept getConcept() {
         return concept;
+    }
+
+    @Override
+    public String getDomainClassName() {
+        return concept.getClassName();
     }
 }
