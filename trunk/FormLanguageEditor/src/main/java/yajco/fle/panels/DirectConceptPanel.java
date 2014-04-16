@@ -4,7 +4,7 @@ import javax.swing.JPanel;
 
 /** *  @author Michaela Bačíková
  * @param <T> type of the concept */
-public class DirectConceptPanel <T> extends javax.swing.JPanel implements PanelAccessor<T> {
+public class DirectConceptPanel <T> extends AbstractAccessiblePanel<T> {
 
     private final PanelAccessor<T> directConceptPanel;
     

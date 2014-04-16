@@ -6,15 +6,15 @@ import javax.swing.DefaultListModel;
 
 /** *  @author Michaela Bačíková
  * @param <T> type of the list item*/
-public class ListPanel <T> extends javax.swing.JPanel implements PanelAccessor<List<T>> {
+public class ListPanel <T> extends AbstractAccessiblePanel<List<T>> {
 
     private final DefaultListModel listModel;
     
     // TODO: naco dva rozne panely toho isteho typu?
-    private final PanelAccessor<T> addPanel;
-    private final PanelAccessor<T> editPanel;
+    private final ConceptPanelBase addPanel;
+    private final ConceptPanelBase editPanel;
     
-    public ListPanel(PanelAccessor<T> addPanel, PanelAccessor<T> editPanel) {
+    public ListPanel(ConceptPanelBase addPanel, ConceptPanelBase editPanel) {
         this.addPanel = addPanel;
         this.editPanel = editPanel;
         //model sa na list nastavi v initComponents
@@ -104,11 +104,20 @@ public class ListPanel <T> extends javax.swing.JPanel implements PanelAccessor<L
     }// </editor-fold>//GEN-END:initComponents
 
     private void addBttnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBttnActionPerformed
-        // show addPanel or notify listeners
+        boolean okPressed = new ConceptDialog(null, addPanel).showDialog();
+        if(okPressed) {
+            Object value = addPanel.getValue();
+            
+        }
+        
+        //panelManager.show(addPanel);
+        //odpamatam si index, ktory bol kliknuty
+        //TODO: do buducnosti specificky observer pre edit/add v listPaneli
     }//GEN-LAST:event_addBttnActionPerformed
 
     private void editBttnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editBttnActionPerformed
-        // show editPanel or notify listeners
+        //odpamatat si index, ktory bol kliknuty
+        //panelManager.show(editPanel);
     }//GEN-LAST:event_editBttnActionPerformed
 
     private void deleteBttnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteBttnActionPerformed
@@ -162,4 +171,7 @@ public class ListPanel <T> extends javax.swing.JPanel implements PanelAccessor<L
         list.setToolTipText(description);
     }
 
+    private void addValue(Object value) {
+        
+    }
 }

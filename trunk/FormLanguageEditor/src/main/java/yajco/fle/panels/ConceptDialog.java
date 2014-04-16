@@ -1,20 +1,22 @@
 package yajco.fle.panels;
 
+import javax.swing.JPanel;
+
 /**
  * @author Michaela Bačíková
  */
 public class ConceptDialog extends javax.swing.JDialog {
 
     private boolean okPressed = false;
-    private final ConceptPanelBase content;
+    private final PanelAccessor content;
 
-    public ConceptDialog(java.awt.Frame parent, ConceptPanelBase content) {
+    public ConceptDialog(java.awt.Frame parent, PanelAccessor content) {
         super(parent, true);
         initComponents();
 
         this.content = content;
 
-        contentPanel.add(content);
+        contentPanel.add((JPanel)content);
     }
 
     @SuppressWarnings("unchecked")
