@@ -6,10 +6,5 @@ package $package;
 #set( $file = $templatesDir + "imports/Imports.vsl" )
 #parse( $file )
 
-public class $panelName extends ConceptPanelBase<$domainClass> {
-
 #set( $file = $templatesDir + "body/" + $concept.getClass().getSimpleName() + ".vsl" )
 #parse( $file )
-
-    // TODO: prepare abstract concept template too
-}
