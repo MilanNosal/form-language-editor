@@ -11,11 +11,9 @@ public class ListPanel <T> extends AbstractAccessiblePanel<List<T>> {
     private final DefaultListModel listModel;
     
     // TODO: naco dva rozne panely toho isteho typu?
-    private final ConcreteConceptPanelBase addPanel;
-    private final ConcreteConceptPanelBase editPanel;
+    private final AbstractAccessiblePanel<T> editPanel;
     
-    public ListPanel(ConcreteConceptPanelBase addPanel, ConcreteConceptPanelBase editPanel) {
-        this.addPanel = addPanel;
+    public ListPanel(AbstractAccessiblePanel<T> editPanel) {
         this.editPanel = editPanel;
         //model sa na list nastavi v initComponents
         listModel = new DefaultListModel();
@@ -34,7 +32,7 @@ public class ListPanel <T> extends AbstractAccessiblePanel<List<T>> {
         deleteBttn = new javax.swing.JButton();
 
         list.setModel(listModel);
-        list.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_INTERVAL_SELECTION);
+        list.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         listScrollPane.setViewportView(list);
 
         buttonPanel.setMaximumSize(new java.awt.Dimension(37, 32767));
@@ -104,27 +102,27 @@ public class ListPanel <T> extends AbstractAccessiblePanel<List<T>> {
     }// </editor-fold>//GEN-END:initComponents
 
     private void addBttnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBttnActionPerformed
-        boolean okPressed = new ConceptDialog(null, addPanel).showDialog();
+        editPanel.reset();
+        boolean okPressed = new ConceptDialog(null, editPanel).showDialog();
         if(okPressed) {
-            Object value = addPanel.getValue();
-            
+            Object value = editPanel.getValue();
+            addValue(value);
         }
-        
-        //panelManager.show(addPanel);
-        //odpamatam si index, ktory bol kliknuty
-        //TODO: do buducnosti specificky observer pre edit/add v listPaneli
     }//GEN-LAST:event_addBttnActionPerformed
 
     private void editBttnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editBttnActionPerformed
-        //odpamatat si index, ktory bol kliknuty
-        //panelManager.show(editPanel);
+        editPanel.setValue(getSelectedItem());
+        boolean okPressed = new ConceptDialog(null, editPanel).showDialog();
+        
+        if(okPressed) {
+            int index = list.getSelectedIndex();
+            T newValue = editPanel.getValue();
+            listModel.set(index, newValue);
+        }
     }//GEN-LAST:event_editBttnActionPerformed
 
     private void deleteBttnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteBttnActionPerformed
-        List<Object> selectedValues = list.getSelectedValuesList();
-        for(Object o : selectedValues) {
-            listModel.removeElement(o);
-        }
+        listModel.removeElement(getSelectedItem());
     }//GEN-LAST:event_deleteBttnActionPerformed
 
 
@@ -172,6 +170,10 @@ public class ListPanel <T> extends AbstractAccessiblePanel<List<T>> {
     }
 
     private void addValue(Object value) {
-        
+        listModel.addElement(value);
+    }
+    
+    private T getSelectedItem() {
+        return (T) list.getSelectedValue();
     }
 }
