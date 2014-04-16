@@ -5,21 +5,21 @@ import yajco.annotation.Before;
 import yajco.annotation.Token;
 
 public class Range extends Constraint {
-    private final long minValue;
+    private final int minValue;
 
-    private final long maxValue;
+    private final int maxValue;
 
     @Before("range")
-    public Range(@Token("INT_VALUE") long minValue, @Token("INT_VALUE") long maxValue) {
+    public Range(@Token("INT_VALUE") int minValue, @Token("INT_VALUE") int maxValue) {
         this.minValue = minValue;
         this.maxValue = maxValue;
     }
 
-    public long getMaxValue() {
+    public int getMaxValue() {
         return maxValue;
     }
 
-    public long getMinValue() {
+    public int getMinValue() {
         return minValue;
     }
 
