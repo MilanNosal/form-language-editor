@@ -1,9 +1,8 @@
 package yajco.fle.model.properties.interfaces;
 
 /**
- *
+ * Marker interface. 
  * @author Milan
  */
-public interface DomainProperty {
-    public String getDomainClassName();
+public interface PrimitiveType {
 }

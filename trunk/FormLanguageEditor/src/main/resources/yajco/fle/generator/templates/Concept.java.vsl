@@ -1,11 +1,10 @@
+#set( $templatesDir = "/src/main/resources/yajco/fle/generator/templates/" )
 package $package;
 
-#foreach($className in $generator.getDomainProperties($concept))
-import $className;
-#end
-#foreach($class in $generator.getPanelClasses($concept))
-#set( $file = "/src/main/resources/yajco/fle/generator/templates/imports/panels/" + $class.getSimpleName() + ".vsl" )
+#set( $file = $templatesDir + "imports/Imports.vsl" )
 #parse( $file )
-#end
 
-hohoho
+public class ${concept.name}Panel extends ConceptPanelBase implements PanelAccessor<${concept.name}> {
+#set( $file = $templatesDir + "body/" + $concept.getClass().getSimpleName() + ".vsl" )
+#parse( $file )
+}
