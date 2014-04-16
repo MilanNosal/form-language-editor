@@ -1,0 +1,2 @@
+    private final PanelAccessor<$property.concept.name> $property.name
+                            = new ConceptPanel<>(new ${property.concept.name}Panel());

@@ -10,6 +10,7 @@ public class ListPanel <T> extends javax.swing.JPanel implements PanelAccessor<L
 
     private final DefaultListModel listModel;
     
+    // TODO: naco dva rozne panely toho isteho typu?
     private final PanelAccessor<T> addPanel;
     private final PanelAccessor<T> editPanel;
     

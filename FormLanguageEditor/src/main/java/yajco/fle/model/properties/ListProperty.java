@@ -2,14 +2,13 @@ package yajco.fle.model.properties;
 
 import yajco.fle.model.Concept;
 import yajco.fle.model.Property;
-import yajco.fle.model.properties.interfaces.DomainType;
+import yajco.fle.model.properties.interfaces.HasType;
 
 /**
  *
  * @author Milan
  */
-public class ListProperty extends Property implements DomainType {
-
+public class ListProperty extends Property implements HasType {
     private final Concept componentType;
 
     public ListProperty(String name, Concept componentType) {
@@ -22,7 +21,7 @@ public class ListProperty extends Property implements DomainType {
     }
 
     @Override
-    public String getDomainTypeName() {
+    public String getTypeName() {
         return componentType.getClassName();
     }
 

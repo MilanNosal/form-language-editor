@@ -1,0 +1,1 @@
+    private final PanelAccessor<$property.getDomainTypeName()> $property.name = new EnumPanel<>(${property.getDomainTypeName()}.class);

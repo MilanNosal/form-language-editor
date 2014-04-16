@@ -6,6 +6,7 @@ import javax.swing.DefaultComboBoxModel;
 /** @author Michaela Bačíková */
 public class ReferencePanel <T> extends javax.swing.JPanel implements PanelAccessor<T> {
 
+    // TODO: toto by malo byt dynamicke, nie? ci budem zakazdym ked sa ma zobrazit reference panel tvorit novy objekt?
     public ReferencePanel(List<T> values) {
         initComponents();
         
