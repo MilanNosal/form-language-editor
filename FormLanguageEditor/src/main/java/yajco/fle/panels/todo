@@ -1,0 +1,8 @@
+ConceptPanelBase
+ - tlacidla, vsetky properties bude vkladat do svojho panelu, pod nim tlacidla
+ - implementuje observable (reset -> posle reset na vsetky sub, cancel -> hide nad PanelManagerom, ok -> notify())
+ListPanel
+ - add, edit, delete -> zavola show nad PanelManagerom
+
+
+ConceptPanelBase musi mat okPressed!

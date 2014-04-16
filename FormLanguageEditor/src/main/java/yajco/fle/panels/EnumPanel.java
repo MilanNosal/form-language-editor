@@ -4,7 +4,7 @@ import javax.swing.DefaultComboBoxModel;
 
 /** *  @author Michaela Bačíková
  * @param <T> enum class */
-public class EnumPanel <T extends Enum<T>> extends javax.swing.JPanel implements PanelAccessor<T> {
+public class EnumPanel <T extends Enum<T>> extends AbstractAccessiblePanel<T> {
 
     public EnumPanel(Class<T> clazz) {
         initComponents();

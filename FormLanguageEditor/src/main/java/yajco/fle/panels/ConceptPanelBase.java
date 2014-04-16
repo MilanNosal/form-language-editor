@@ -8,7 +8,7 @@ import javax.swing.JPanel;
  * @author Milan
  * @param <T> type 
  */
-public abstract class ConceptPanelBase <T> extends javax.swing.JPanel implements PanelAccessor<T> {
+public abstract class ConceptPanelBase <T> extends AbstractAccessiblePanel {
 
     /**
      * Creates new form ConceptPanelBase

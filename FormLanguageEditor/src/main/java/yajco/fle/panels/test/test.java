@@ -26,10 +26,6 @@ public class test extends javax.swing.JFrame {
         
         ConceptPanel<MojEnum> dcp = new ConceptPanel<>(new EnumPanel(MojEnum.class));
         contentPanel.add(dcp);
-        
-        ListPanel lp = new ListPanel(new RealPanel(), new RealPanel());
-        
-        contentPanel.add(lp);
     }
 
     @SuppressWarnings("unchecked")
