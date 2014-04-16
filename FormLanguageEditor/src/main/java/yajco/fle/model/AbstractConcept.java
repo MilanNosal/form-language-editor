@@ -1,6 +1,8 @@
 package yajco.fle.model;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -22,7 +24,11 @@ public class AbstractConcept extends Concept {
 
     @Override
     public String toString() {
-        return "\n\tabstractConcept "+getName()+" subtypes:{({\n\t\t"+Arrays.toString(subtypes.toArray())+"\n\t})}";
+        List<String> subtypesNames = new ArrayList<>(subtypes.size());
+        for (Concept concept : subtypes) {
+            subtypesNames.add(concept.getName());
+        }
+        return "\n\tabstractConcept "+getName()+" subtypes:{({\n\t\t"+Arrays.toString(subtypesNames.toArray())+"\n\t})}";
     }
     
 }
