@@ -5,7 +5,12 @@
 #end
     // </editor-fold>
 
-// TODO konstruktor + pridanie ale nezabudntut nastavit label a desc miskinym panelom
+    // <editor-fold defaultstate="collapsed" desc="Concept panel constructor">
+#set( $file = $templatesDir + "body/properties/ConceptPanelConstructor.vsl" )
+#parse( $file )
+    // </editor-fold>
 
+    // <editor-fold defaultstate="collapsed" desc="PanelAccessor interface implementation (differs between abstract and concrete concepts)">
 #set( $file = $templatesDir + "body/properties/PanelAccessorImplementation.vsl" )
 #parse( $file )
+    // </editor-fold>
