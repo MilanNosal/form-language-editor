@@ -1,16 +1,9 @@
 package yajco.fle.panels.primitive;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.text.DecimalFormat;
-import java.text.ParseException;
-import javax.swing.InputVerifier;
-import javax.swing.JComponent;
-import javax.swing.JTextField;
-import yajco.fle.panels.PanelAccessor;
+import yajco.fle.panels.AbstractAccessiblePanel;
 
 /** @author Michaela Bačíková */
-public class IntegerPanel extends javax.swing.JPanel implements PanelAccessor<Integer> {
+public class IntegerPanel extends AbstractAccessiblePanel<Integer> {
     
     public IntegerPanel() {
         initComponents();

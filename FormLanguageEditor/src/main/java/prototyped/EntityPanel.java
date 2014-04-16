@@ -4,8 +4,8 @@ import yajco.fle.panels.ConcreteConceptPanelBase;
 import java.util.List;
 import prototyped.model.Entity;
 import prototyped.model.Property;
+import yajco.fle.panels.AbstractAccessiblePanel;
 import yajco.fle.panels.ListPanel;
-import yajco.fle.panels.PanelAccessor;
 import yajco.fle.panels.primitive.StringPanel;
 
 /**
@@ -14,12 +14,12 @@ import yajco.fle.panels.primitive.StringPanel;
  */
 public class EntityPanel extends ConcreteConceptPanelBase<Entity> {
     
-    private final PanelAccessor<String> name = new StringPanel();
-    private final PanelAccessor<List<Property>> properties = new ListPanel<>(new PropertyPanel(), new PropertyPanel());
+    private final AbstractAccessiblePanel<String> name = new StringPanel();
+    private final AbstractAccessiblePanel<List<Property>> properties = new ListPanel<Property>(new PropertyPanel());
     
     public EntityPanel() {
-        addProperty("name", name);
-        addProperty("properties", properties);
+        addRowForProperty("name", name);
+        addRowForProperty("properties", properties);
     }
 
     @Override

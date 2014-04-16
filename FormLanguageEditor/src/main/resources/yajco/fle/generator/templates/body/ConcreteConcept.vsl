@@ -1,5 +1,5 @@
 
-public class $panelName extends ConcreteConceptPanelBase<$domainClass> {
+public class $panelName extends yajco.fle.panels.ConcreteConceptPanelBase<$domainClass> {
 
     // <editor-fold defaultstate="collapsed" desc="Properties declarations">
 #foreach ( $property in $concept.properties)

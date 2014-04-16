@@ -2,6 +2,7 @@ package prototyped;
 
 import yajco.fle.panels.ConcreteConceptPanelBase;
 import prototyped.model.Constraint;
+import yajco.fle.panels.AbstractAccessiblePanel;
 import yajco.fle.panels.PanelAccessor;
 import yajco.fle.panels.primitive.IntegerPanel;
 
@@ -11,12 +12,12 @@ import yajco.fle.panels.primitive.IntegerPanel;
  */
 public class ConstraintPanel extends ConcreteConceptPanelBase<Constraint> {
 
-    private final PanelAccessor<Integer> min = new IntegerPanel();
-    private final PanelAccessor<Integer> max = new IntegerPanel();
+    private final AbstractAccessiblePanel<Integer> min = new IntegerPanel();
+    private final AbstractAccessiblePanel<Integer> max = new IntegerPanel();
     
     public ConstraintPanel() {
-        addProperty("min", min);
-        addProperty("max", max);
+        addRowForProperty("min", min);
+        addRowForProperty("max", max);
     }
 
     @Override

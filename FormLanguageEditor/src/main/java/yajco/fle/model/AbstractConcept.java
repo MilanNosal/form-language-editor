@@ -18,7 +18,7 @@ public class AbstractConcept extends Concept {
         this.subtypes = subtypes;
     }
     
-    public Set<Concept> getDirectSubtypes() {
+    public Set<Concept> getSubtypes() {
         return subtypes;
     }
 

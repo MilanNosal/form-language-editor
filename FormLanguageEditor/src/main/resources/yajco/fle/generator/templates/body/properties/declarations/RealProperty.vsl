@@ -1,1 +1,1 @@
-    private final PanelAccessor<Double> $property.name = new yajco.fle.panels.primitive.RealPanel();
+    private final yajco.fle.panels.AbstractAccessiblePanel<Double> $property.name = new yajco.fle.panels.primitive.RealPanel();

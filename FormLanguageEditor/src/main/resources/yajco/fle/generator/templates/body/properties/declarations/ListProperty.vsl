@@ -1,2 +1,2 @@
-    private final PanelAccessor<java.util.List<$property.getTypeName()>> $property.name 
-                                = new yajco.fle.panels.ListPanel<$property.getTypeName()>(new ${property.componentType.name}Panel(), new ${property.componentType.name}Panel());
+    private final yajco.fle.panels.AbstractAccessiblePanel<java.util.List<$property.getTypeName()>> $property.name 
+                                = new yajco.fle.panels.ListPanel<$property.getTypeName()>(new ${property.componentType.name}Panel());

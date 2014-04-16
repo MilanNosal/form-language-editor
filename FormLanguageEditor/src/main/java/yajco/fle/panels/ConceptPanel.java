@@ -6,9 +6,9 @@ import javax.swing.JPanel;
  * @param <T> type of the concept */
 public class ConceptPanel <T> extends AbstractAccessiblePanel<T> {
 
-    private final PanelAccessor<T> directConceptPanel;
+    private final AbstractAccessiblePanel<T> directConceptPanel;
     
-    public ConceptPanel(PanelAccessor<T> directConceptPanel) {
+    public ConceptPanel(AbstractAccessiblePanel<T> directConceptPanel) {
         initComponents();
         this.directConceptPanel = directConceptPanel;
         this.add((JPanel)directConceptPanel);

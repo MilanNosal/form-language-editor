@@ -1,6 +1,24 @@
-##
-## TOTO JE LEN SKOPIROVANY ConcreteConcept.vsl LEBO CHYBAL TENTO SUBOR PRI GENEROVANI
-## potom treba napravit
-##
 
-    // TODO
+public class $panelName extends yajco.fle.panels.AbstractConceptPanelBase<$domainClass> {
+
+    // <editor-fold defaultstate="collapsed" desc="Concept panel constructor">
+    public $panelName() {
+#foreach ( $subtype in $concept.subtypes)
+        registerSubtype("$subtype.name", ${subtype.className}.class, new ${subtype.name}Panel());
+#end
+    }
+    // </editor-fold>
+
+
+    @Override
+    public void setValue($domainClass value) {
+        int toSelect = classes.indexOf(value.getClass());
+        conceptsComboBox.setSelectedIndex(toSelect);
+#foreach ( $subtype in $concept.subtypes )
+        if(value instanceof ${subtype.className}) {
+            ((yajco.fle.panels.AbstractAccessiblePanel<${subtype.className}>)panels
+                    .get(toSelect)).setValue((${subtype.className}) value);
+        }
+#end
+    }
+}

@@ -22,7 +22,7 @@ public class test extends javax.swing.JFrame {
         
         List<MojEnum> list = new ArrayList<>();
         list.addAll(Arrays.asList(MojEnum.values()));
-        contentPanel.add(new ReferencePanel(list));
+        contentPanel.add(new ReferencePanel());
         
         ConceptPanel<MojEnum> dcp = new ConceptPanel<>(new EnumPanel(MojEnum.class));
         contentPanel.add(dcp);

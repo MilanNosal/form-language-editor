@@ -3,6 +3,7 @@ package prototyped;
 import yajco.fle.panels.ConcreteConceptPanelBase;
 import prototyped.model.Constraint;
 import prototyped.model.Property;
+import yajco.fle.panels.AbstractAccessiblePanel;
 import yajco.fle.panels.ConceptPanel;
 import yajco.fle.panels.PanelAccessor;
 import yajco.fle.panels.primitive.StringPanel;
@@ -11,13 +12,13 @@ import yajco.fle.panels.primitive.StringPanel;
  *
  * @author Milan
  */
-public class PropertyPanel extends ConcreteConceptPanelBase<Property>{
-    private final PanelAccessor<String> name = new StringPanel();
-    private final PanelAccessor<Constraint> constraint = new ConceptPanel<>(new ConstraintPanel());
+public class PropertyPanel extends ConcreteConceptPanelBase<Property> {
+    private final AbstractAccessiblePanel<String> name = new StringPanel();
+    private final AbstractAccessiblePanel<Constraint> constraint = new ConceptPanel<>(new ConstraintPanel());
     
     public PropertyPanel() {
-        addProperty("name", name);
-        addProperty("constraint", constraint);
+        addRowForProperty("name", name);
+        addRowForProperty("constraint", constraint);
     }
 
     @Override

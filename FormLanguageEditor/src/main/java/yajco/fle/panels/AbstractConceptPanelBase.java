@@ -1,16 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package yajco.fle.panels;
+
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  *
  * @author Milan
  */
-public class AbstractConceptPanelBase extends javax.swing.JPanel {
+public abstract class AbstractConceptPanelBase<T> extends AbstractAccessiblePanel<T> {
 
     /**
      * Creates new form AbstractConceptPanelBase
@@ -18,6 +15,17 @@ public class AbstractConceptPanelBase extends javax.swing.JPanel {
     public AbstractConceptPanelBase() {
         initComponents();
     }
+    
+    protected void registerSubtype(String label, Class<? extends T> clazz, AbstractAccessiblePanel<? extends T> conceptPanel) {
+        conceptsComboBox.addItem(label);
+        classes.add(clazz);
+        panels.add(conceptPanel);
+    }
+    
+    protected final List<Class<? extends T>> classes = new LinkedList<Class<? extends T>>();
+    
+    protected final List<AbstractAccessiblePanel<? extends T>> panels
+            = new LinkedList<AbstractAccessiblePanel<? extends T>>();
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -28,19 +36,40 @@ public class AbstractConceptPanelBase extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        conceptsComboBox = new javax.swing.JComboBox();
+
+        setLayout(new java.awt.BorderLayout());
+
+        conceptsComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        add(conceptsComboBox, java.awt.BorderLayout.PAGE_START);
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    protected javax.swing.JComboBox conceptsComboBox;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public T getValue() {
+        int selected = conceptsComboBox.getSelectedIndex();
+        return panels.get(selected).getValue();
+    }
+
+    @Override
+    public void reset() {
+        for(AbstractAccessiblePanel<? extends T> panel : panels) {
+            panel.reset();
+        }
+    }
+
+    @Override
+    public void setLabel(String label) {
+        // TODO: nedat label hore do okienka?
+        System.err.println("AbstractConceptPanelBase does not support setting label.");
+    }
+
+    @Override
+    public void setDescription(String description) {
+        System.err.println("AbstractConceptPanelBase does not support setting description.");
+    }
 }

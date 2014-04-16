@@ -1,2 +1,2 @@
-    private final PanelAccessor<$property.getTypeName()> $property.name
+    private final yajco.fle.panels.AbstractAccessiblePanel<$property.getTypeName()> $property.name
                                 = new yajco.fle.panels.ConceptPanel<$property.getTypeName()>(new ${property.concept.name}Panel());

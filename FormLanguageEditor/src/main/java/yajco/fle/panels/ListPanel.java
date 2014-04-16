@@ -6,7 +6,7 @@ import javax.swing.DefaultListModel;
 
 /** *  @author Michaela Bačíková
  * @param <T> type of the list item*/
-public class ListPanel <T> extends AbstractAccessiblePanel<List<T>> {
+public class ListPanel<T> extends AbstractAccessiblePanel<List<T>> {
 
     private final DefaultListModel listModel;
     

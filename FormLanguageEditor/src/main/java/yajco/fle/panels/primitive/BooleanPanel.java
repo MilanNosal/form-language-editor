@@ -6,10 +6,10 @@
 
 package yajco.fle.panels.primitive;
 
-import yajco.fle.panels.PanelAccessor;
+import yajco.fle.panels.AbstractAccessiblePanel;
 
 /** @author Michaela Bačíková */
-public class BooleanPanel extends javax.swing.JPanel implements PanelAccessor<Boolean> {
+public class BooleanPanel extends AbstractAccessiblePanel<Boolean> {
 
     public BooleanPanel() {
         initComponents();

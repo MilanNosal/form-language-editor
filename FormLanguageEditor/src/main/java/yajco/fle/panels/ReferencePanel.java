@@ -7,10 +7,8 @@ import javax.swing.DefaultComboBoxModel;
 public class ReferencePanel <T> extends AbstractAccessiblePanel<T> {
 
     // TODO: toto by malo byt dynamicke, nie? ci budem zakazdym ked sa ma zobrazit reference panel tvorit novy objekt?
-    public ReferencePanel(List<T> references) {
+    public ReferencePanel() {
         initComponents();
-        
-        valuesCmbbx.setModel(new DefaultComboBoxModel(references.toArray()));
     }
 
     @SuppressWarnings("unchecked")
