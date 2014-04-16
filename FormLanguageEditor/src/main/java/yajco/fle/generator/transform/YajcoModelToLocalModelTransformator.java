@@ -66,18 +66,18 @@ public class YajcoModelToLocalModelTransformator {
 
     private yajco.fle.model.Language transformLanguage() {
         for (Concept concept : inputLanguage.getConcepts()) {
-            yajco.fle.model.Concept c = createConcept(concept);
+            yajco.fle.model.Concept c = transformPartialConcept(concept);
             if (c != null) {
                 concepts.put(concept, c);
             }
         }
         for (yajco.fle.model.Concept concept : concepts.values()) {
-            transformConcept(concept);
+            reprocessConcept(concept);
         }
         return new yajco.fle.model.Language(new ArrayList<>(concepts.values()));
     }
 
-    private yajco.fle.model.Concept createConcept(Concept concept) {
+    private yajco.fle.model.Concept transformPartialConcept(Concept concept) {
         //ignorovat ENUM concepty, tie sa pouziju len ako primitivnejsi typ
         if (concept.getPattern(yajco.model.pattern.impl.Enum.class) != null) {
             return null;
@@ -97,17 +97,17 @@ public class YajcoModelToLocalModelTransformator {
         return newConcept;
     }
 
-    private void transformConcept(yajco.fle.model.Concept concept) {
+    private void reprocessConcept(yajco.fle.model.Concept concept) {
         if (concept instanceof ConcreteConcept) {
-            transformConcept((ConcreteConcept) concept);
+            reprocessConcept((ConcreteConcept) concept);
         } else if (concept instanceof AbstractConcept) {
-            transformConcept((AbstractConcept) concept);
+            reprocessConcept((AbstractConcept) concept);
         } else {
             throw new IllegalArgumentException("Not known concept type " + concept.getClassName() + "[" + concept.getClass().getCanonicalName() + "]");
         }
     }
 
-    private void transformConcept(ConcreteConcept concept) {
+    private void reprocessConcept(ConcreteConcept concept) {
         Concept sourceConcept = concept.getSourceElement();
         List<Property> properties = concept.getProperties();
         if (!sourceConcept.getConcreteSyntax().isEmpty()) {
@@ -121,7 +121,7 @@ public class YajcoModelToLocalModelTransformator {
         }
     }
 
-    private void transformConcept(AbstractConcept concept) {
+    private void reprocessConcept(AbstractConcept concept) {
         Concept sourceConcept = concept.getSourceElement();
         List<Concept> descendants = getAllDescendantConcepts(sourceConcept);
         Set<yajco.fle.model.Concept> directSubtypes = concept.getDirectSubtypes();
