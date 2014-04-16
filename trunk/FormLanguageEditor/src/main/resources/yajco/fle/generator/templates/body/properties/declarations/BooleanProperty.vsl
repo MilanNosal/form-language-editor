@@ -1,1 +1,1 @@
-    private final PanelAccessor<Boolean> $property.name = new yajco.fle.panels.primitive.BooleanPanel();
+    private final yajco.fle.panels.AbstractAccessiblePanel<Boolean> $property.name = new yajco.fle.panels.primitive.BooleanPanel();

@@ -1,9 +1,9 @@
 package yajco.fle.panels.primitive;
 
-import yajco.fle.panels.PanelAccessor;
+import yajco.fle.panels.AbstractAccessiblePanel;
 
 /** @author Michaela Bačíková */
-public class StringPanel extends javax.swing.JPanel implements PanelAccessor<String> {
+public class StringPanel extends AbstractAccessiblePanel<String> {
 
     public StringPanel() {
         initComponents();

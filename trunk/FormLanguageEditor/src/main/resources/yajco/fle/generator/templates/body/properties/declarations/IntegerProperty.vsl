@@ -1,1 +1,1 @@
-    private final PanelAccessor<Integer> $property.name = new yajco.fle.panels.primitive.IntegerPanel();
+    private final yajco.fle.panels.AbstractAccessiblePanel<Integer> $property.name = new yajco.fle.panels.primitive.IntegerPanel();

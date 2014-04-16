@@ -17,9 +17,9 @@ public abstract class ConcreteConceptPanelBase <T> extends AbstractAccessiblePan
         initComponents();
     }
     
-    protected void addProperty(String label, PanelAccessor panel) {
+    protected void addRowForProperty(String label, AbstractAccessiblePanel panel) {
         add(new Label(label));
-        add((JPanel)panel);
+        add(panel);
     }
 
     /**

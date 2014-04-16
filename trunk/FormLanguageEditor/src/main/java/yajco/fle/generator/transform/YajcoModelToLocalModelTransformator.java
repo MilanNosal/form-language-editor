@@ -116,7 +116,7 @@ public class YajcoModelToLocalModelTransformator {
     private void reprocessConcept(AbstractConcept concept) {
         Concept sourceConcept = concept.getSourceElement();
         List<Concept> descendants = getAllDescendantConcepts(sourceConcept);
-        Set<yajco.fle.model.Concept> directSubtypes = concept.getDirectSubtypes();
+        Set<yajco.fle.model.Concept> directSubtypes = concept.getSubtypes();
         for (Concept desc : descendants) {
             if (concepts.containsKey(desc)) {
                 directSubtypes.add(concepts.get(desc));
