@@ -7,10 +7,10 @@ import javax.swing.DefaultComboBoxModel;
 public class ReferencePanel <T> extends javax.swing.JPanel implements PanelAccessor<T> {
 
     // TODO: toto by malo byt dynamicke, nie? ci budem zakazdym ked sa ma zobrazit reference panel tvorit novy objekt?
-    public ReferencePanel(List<T> values) {
+    public ReferencePanel(List<T> references) {
         initComponents();
         
-        valuesCmbbx.setModel(new DefaultComboBoxModel(values.toArray()));
+        valuesCmbbx.setModel(new DefaultComboBoxModel(references.toArray()));
     }
 
     @SuppressWarnings("unchecked")
@@ -41,7 +41,11 @@ public class ReferencePanel <T> extends javax.swing.JPanel implements PanelAcces
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox valuesCmbbx;
     // End of variables declaration//GEN-END:variables
-
+    
+    public void setReferences(List<T> references) {
+        valuesCmbbx.setModel(new DefaultComboBoxModel(references.toArray()));
+    }
+    
     @Override
     public void setValue(T value) {
         valuesCmbbx.setSelectedItem(value);
