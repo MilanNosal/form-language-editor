@@ -21,7 +21,7 @@ public class ConstraintPanel extends ConceptPanelBase implements PanelAccessor<C
     @Override
     public void setValue(Constraint value) {
         min.setValue(value.getMin());
-        max.setValue(value.getMin());
+        max.setValue(value.getMax());
     }
 
     @Override

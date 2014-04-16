@@ -1,9 +1,6 @@
 package yajco.fle.generator;
 
 import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Writer;
@@ -15,8 +12,10 @@ import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
 import javax.annotation.processing.Filer;
+import javax.tools.JavaFileObject;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
+import yajco.fle.generator.transform.YajcoModelToLocalModelTransformator;
 import yajco.fle.model.Concept;
 import yajco.fle.model.ConcreteConcept;
 import yajco.fle.model.Property;
@@ -39,19 +38,21 @@ public class PanelsGenerator implements FilesGenerator {
 
     @Override
     public void generateFiles(Language language, Filer filer, Properties properties) {
-        yajco.fle.model.Language lang = createDummy(); //YajcoModelToLocalModelTransformator.transform(language);
+        //yajco.fle.model.Language lang = createDummy(); //YajcoModelToLocalModelTransformator.transform(language);
+        yajco.fle.model.Language lang = YajcoModelToLocalModelTransformator.transform(language);
 
         try {
             String path = TEMPLATE_PACKAGE + "/" + template + ".java.vsl";
-            File dirs = new File("src/main/java/generated");
-            dirs.mkdirs();
+//            File dirs = new File("src/main/java/generated");
+//            dirs.mkdirs();
             for (Concept concept : lang.getConcepts()) {
-                File wrt = new File("src/main/java/generated/" + concept.getName() + "Panel.java");
-                wrt.createNewFile();
-                try (
-                        InputStreamReader reader = new InputStreamReader(new FileInputStream(path), "utf-8");
-                        Writer writer = new BufferedWriter(new FileWriter(wrt))) {
-                    // filer.createSourceFile("generated." + concept.getName()+ "Panel").openWriter()) {
+                //File wrt = new File("src/main/java/generated/" + concept.getName() + "Panel.java");
+                String className = concept.getName() + "Panel";
+                JavaFileObject jfo = filer.createSourceFile(className);
+                //wrt.createNewFile();
+                try ( //InputStreamReader reader = new InputStreamReader(new FileInputStream(path), "utf-8");
+                        InputStreamReader reader = new InputStreamReader(language.getClass().getResourceAsStream(path), "utf-8");
+                        Writer writer = new BufferedWriter(jfo.openWriter())) {
                     Map<String, Object> params = new HashMap<>();
                     VelocityContext context = new VelocityContext(params);
 
@@ -76,7 +77,7 @@ public class PanelsGenerator implements FilesGenerator {
         }
         return retVal;
     }
-    
+
     public String toUCIdent(String ident) {
         return Character.toUpperCase(ident.charAt(0)) + ident.substring(1);
     }
@@ -84,12 +85,13 @@ public class PanelsGenerator implements FilesGenerator {
     public String toLCIdent(String ident) {
         return Character.toLowerCase(ident.charAt(0)) + ident.substring(1);
     }
-    
+
     /**
-     * Vystrihnutie mena konceptu, ktore potom pouzivam pre pracu vdaka
-     * mennym konvenciam. Teda uvidim ci pouzijem, zatial asi ani nie.
+     * Vystrihnutie mena konceptu, ktore potom pouzivam pre pracu vdaka mennym
+     * konvenciam. Teda uvidim ci pouzijem, zatial asi ani nie.
+     *
      * @param property
-     * @return 
+     * @return
      */
     public String getPropertyTypeName(Property property) {
         String propSimpleName = property.getClass().getSimpleName();
@@ -114,7 +116,7 @@ public class PanelsGenerator implements FilesGenerator {
         properties.add(new StringProperty("name"));
         properties.add(new ListProperty("properties", property));
         Concept entity = new ConcreteConcept("Entity", "prototyped.model.Entity", properties);
-        
+
         List<Concept> concepts = new ArrayList<>();
         concepts.add(entity);
         concepts.add(property);
@@ -123,15 +125,15 @@ public class PanelsGenerator implements FilesGenerator {
         return new yajco.fle.model.Language(concepts);
     }
 
-    protected static final String VELOCITY_PROPERTIES_FILE = "velocity.properties";
-    protected static final String TEMPLATE_PACKAGE = "src/main/resources/yajco/fle/generator/templates";
+    protected static final String VELOCITY_PROPERTIES_FILE = "/velocity.properties";
+    protected static final String TEMPLATE_PACKAGE = "/yajco/fle/generator/templates";
     protected static VelocityEngine velocityEngine;
     protected final String template = "Concept";
 
     static {
         try {
             Properties velocityProperties = new Properties();
-            //velocityProperties.load(ClassLoader.getSystemClassLoader().getResourceAsStream(VELOCITY_PROPERTIES_FILE));
+            velocityProperties.load(PanelsGenerator.class.getResourceAsStream(VELOCITY_PROPERTIES_FILE));
             velocityEngine = new VelocityEngine(velocityProperties);
         } catch (Exception e) {
             throw new ConfigurationException("Failed during loading of the configuration file '" + VELOCITY_PROPERTIES_FILE + "'", e);

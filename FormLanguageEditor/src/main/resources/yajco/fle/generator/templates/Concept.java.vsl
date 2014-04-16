@@ -1,4 +1,4 @@
-#set( $templatesDir = "/src/main/resources/yajco/fle/generator/templates/" )
+#set( $templatesDir = "/yajco/fle/generator/templates/" )
 #set( $panelName = ${concept.name} + "Panel" )
 #set( $domainClass = ${concept.className} )
 package $package;
