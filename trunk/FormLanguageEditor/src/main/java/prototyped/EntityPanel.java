@@ -1,5 +1,6 @@
 package prototyped;
 
+import yajco.fle.panels.ConceptPanelBase;
 import java.util.List;
 import prototyped.model.Entity;
 import prototyped.model.Property;
@@ -11,7 +12,7 @@ import yajco.fle.panels.primitive.StringPanel;
  *
  * @author Milan
  */
-public class EntityPanel extends ConceptPanelBase implements PanelAccessor<Entity> {
+public class EntityPanel extends ConceptPanelBase<Entity> {
     
     private final PanelAccessor<String> name = new StringPanel();
     private final PanelAccessor<List<Property>> properties = new ListPanel<>(new PropertyPanel(), new PropertyPanel());
