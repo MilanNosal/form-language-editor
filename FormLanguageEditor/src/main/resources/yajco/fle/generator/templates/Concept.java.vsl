@@ -1,10 +1,14 @@
 #set( $templatesDir = "/src/main/resources/yajco/fle/generator/templates/" )
+#set( $panelName = ${concept.name} + "Panel" )
+#set( $domainClass = ${concept.className} )
 package $package;
 
 #set( $file = $templatesDir + "imports/Imports.vsl" )
 #parse( $file )
 
-public class ${concept.name}Panel extends ConceptPanelBase implements PanelAccessor<${concept.name}> {
+public class $panelName extends ConceptPanelBase implements PanelAccessor<$domainClass> {
 #set( $file = $templatesDir + "body/" + $concept.getClass().getSimpleName() + ".vsl" )
 #parse( $file )
+
+    // TODO: prepare abstract concept template too
 }

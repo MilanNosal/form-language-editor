@@ -1,11 +1,5 @@
 package yajco.fle.generator.transform;
 
-import com.thoughtworks.xstream.XStream;
-import java.beans.XMLEncoder;
-import java.io.BufferedOutputStream;
-import java.io.FileOutputStream;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -13,8 +7,6 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import yajco.fle.model.AbstractConcept;
 import yajco.fle.model.ConcreteConcept;
 import yajco.fle.model.Property;

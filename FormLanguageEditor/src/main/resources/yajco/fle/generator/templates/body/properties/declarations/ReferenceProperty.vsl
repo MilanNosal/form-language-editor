@@ -1,2 +1,2 @@
-    private final PanelAccessor<$property.getDomainTypeName()> $property.name
-                            = new ReferencePanel<>(null);
+    private final PanelAccessor<$property.getTypeName()> $property.name
+                                = new ReferencePanel<>(null);

@@ -1,0 +1,35 @@
+    // <editor-fold defaultstate="collapsed" desc="PanelAccessor interface implementation (differs between abstract and concrete concepts)">
+    @Override
+    public void setValue($domainClass value) {
+#foreach($property in $concept.properties)
+        this.${property.name}.setValue(value.get${generator.toUCIdent($property.name)}());
+#end
+    }
+
+    @Override
+    public $domainClass getValue() {
+        return new $domainClass(
+#foreach($property in $concept.properties)
+                    this.${property.name}.getValue()#if($velocityHasNext),#end
+
+#end
+        );
+    }
+
+    @Override
+    public void reset() {
+#foreach($property in $concept.properties)
+        this.${property.name}.reset();
+#end
+    }
+
+    @Override
+    public void setLabel(String label) {
+        System.err.println("Setting label on $panelName is not supported.");
+    }
+
+    @Override
+    public void setDescription(String description) {
+        System.err.println("Setting description on $panelName is not supported.");
+    }
+    // </editor-fold>

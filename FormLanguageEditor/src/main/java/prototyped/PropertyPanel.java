@@ -38,6 +38,7 @@ public class PropertyPanel extends ConceptPanelBase implements PanelAccessor<Pro
 
     @Override
     public void setLabel(String label) {
+        System.err.println("");
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
