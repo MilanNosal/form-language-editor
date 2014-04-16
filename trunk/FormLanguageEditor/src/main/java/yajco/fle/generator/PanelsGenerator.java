@@ -47,7 +47,7 @@ public class PanelsGenerator implements FilesGenerator {
 //            dirs.mkdirs();
             for (Concept concept : lang.getConcepts()) {
                 //File wrt = new File("src/main/java/generated/" + concept.getName() + "Panel.java");
-                String className = concept.getName() + "Panel";
+                String className = "generated."+concept.getName() + "Panel";
                 JavaFileObject jfo = filer.createSourceFile(className);
                 //wrt.createNewFile();
                 try ( //InputStreamReader reader = new InputStreamReader(new FileInputStream(path), "utf-8");
