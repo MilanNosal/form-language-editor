@@ -2,14 +2,15 @@ package yajco.fle.model.properties;
 
 import java.util.Set;
 import yajco.fle.model.Property;
+import yajco.fle.model.properties.interfaces.DomainProperty;
 
 /**
  * Enum.getValue of alebo nieco take na tvorenie instancii.
  *
  * @author Milan
  */
-public class EnumProperty extends Property {
-
+public class EnumProperty extends Property implements DomainProperty {
+ 
     private final Set<String> constants;
     
     private final String className;
@@ -24,8 +25,13 @@ public class EnumProperty extends Property {
         return constants;
     }
 
+
+    @Override
+    public String getDomainClassName() {
+        return className;
+    }
+
     public String getClassName() {
         return className;
     }
-    
 }

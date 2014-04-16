@@ -2,12 +2,13 @@ package yajco.fle.model.properties;
 
 import yajco.fle.model.Concept;
 import yajco.fle.model.Property;
+import yajco.fle.model.properties.interfaces.DomainProperty;
 
 /**
  *
  * @author Milan
  */
-public class ListProperty extends Property {
+public class ListProperty extends Property implements DomainProperty {
 
     private final Concept componentType;
 
@@ -21,8 +22,12 @@ public class ListProperty extends Property {
     }
 
     @Override
+    public String getDomainClassName() {
+        return componentType.getClassName();
+    }
+
+    @Override
     public String toString() {
         return "listProperty[innerType:"+componentType.getName()+"]";
     }
-    
 }

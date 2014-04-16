@@ -4,9 +4,9 @@ import java.util.List;
 import javax.swing.DefaultComboBoxModel;
 
 /** @author Michaela Bačíková */
-public class ReferenceTypePanel <T> extends javax.swing.JPanel implements PanelAccessor<T> {
+public class ReferencePanel <T> extends javax.swing.JPanel implements PanelAccessor<T> {
 
-    public ReferenceTypePanel(List<T> values) {
+    public ReferencePanel(List<T> values) {
         initComponents();
         
         valuesCmbbx.setModel(new DefaultComboBoxModel(values.toArray()));

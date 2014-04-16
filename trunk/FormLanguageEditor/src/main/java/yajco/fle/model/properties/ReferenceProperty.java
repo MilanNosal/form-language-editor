@@ -2,12 +2,13 @@ package yajco.fle.model.properties;
 
 import yajco.fle.model.Concept;
 import yajco.fle.model.Property;
+import yajco.fle.model.properties.interfaces.DomainProperty;
 
 /**
  *
  * @author Milan
  */
-public class ReferenceProperty extends Property {
+public class ReferenceProperty extends Property implements DomainProperty {
 
     private final Concept concept;
 
@@ -26,10 +27,14 @@ public class ReferenceProperty extends Property {
     public Property getRefId() {
         return refId;
     }
+    
+    @Override
+    public String getDomainClassName() {
+        return concept.getClassName();
+    }
 
     @Override
     public String toString() {
         return "ReferenceProperty {concept:"+concept.getName()+" | refId:"+refId.getName()+"}";
     }
-    
 }

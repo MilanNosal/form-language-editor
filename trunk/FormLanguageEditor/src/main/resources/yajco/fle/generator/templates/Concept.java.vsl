@@ -1,0 +1,11 @@
+package $package;
+
+#foreach($className in $generator.getDomainProperties($concept))
+import $className;
+#end
+#foreach($class in $generator.getPanelClasses($concept))
+#set( $file = "/src/main/resources/yajco/fle/generator/templates/imports/panels/" + $class.getSimpleName() + ".vsl" )
+#parse( $file )
+#end
+
+hohoho
