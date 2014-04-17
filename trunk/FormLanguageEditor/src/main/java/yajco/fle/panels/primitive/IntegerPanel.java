@@ -52,16 +52,6 @@ public class IntegerPanel extends AbstractAccessiblePanel<Integer> {
 
     @Override
     public void reset() {
-        integerFrmttdTxtfld.setValue("");
-    }
-
-    @Override
-    public void setLabel(String label) {
-        integerFrmttdTxtfld.setName(label);
-    }
-
-    @Override
-    public void setDescription(String description) {
-        integerFrmttdTxtfld.setToolTipText(description);
+        integerFrmttdTxtfld.setValue(0);
     }
 }

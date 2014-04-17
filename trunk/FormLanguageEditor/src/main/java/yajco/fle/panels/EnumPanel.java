@@ -58,17 +58,7 @@ public class EnumPanel <T extends Enum<T>> extends AbstractAccessiblePanel<T> {
     public void reset() {
         enumCmbbx.setSelectedIndex(0);
     }
-
-    @Override
-    public void setLabel(String label) {
-        enumCmbbx.setName(label);
-    }
-
-    @Override
-    public void setDescription(String description) {
-        enumCmbbx.setToolTipText(description);
-    }
-
+    
     private T[] getEnumValues(Class<T> clazz) {
         try {
             return (T[]) clazz.getDeclaredMethod("values").invoke(null);

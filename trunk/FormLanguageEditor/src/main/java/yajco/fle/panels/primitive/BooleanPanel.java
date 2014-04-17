@@ -60,14 +60,4 @@ public class BooleanPanel extends AbstractAccessiblePanel<Boolean> {
     public void reset() {
         booleanChckbx.setSelected(false);
     }
-
-    @Override
-    public void setLabel(String label) {
-        booleanChckbx.setName(label);
-    }
-
-    @Override
-    public void setDescription(String description) {
-        booleanChckbx.setToolTipText(description);
-    }
 }

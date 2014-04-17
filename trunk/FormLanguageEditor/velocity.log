@@ -1,776 +1,128 @@
-2014-04-16 21:54:23,956 - The version of log4j being used does not support the "trace" level.
-2014-04-16 21:54:23,956 - Initializing Velocity, Calling init()...
-2014-04-16 21:54:23,956 - *******************************************************************
-2014-04-16 21:54:23,956 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2014-04-16 21:54:23,956 - RuntimeInstance initializing.
-2014-04-16 21:54:23,956 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
-2014-04-16 21:54:23,956 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2014-04-16 21:54:23,956 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2014-04-16 21:54:23,956 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2014-04-16 21:54:23,956 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2014-04-16 21:54:23,958 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
-2014-04-16 21:54:23,961 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2014-04-16 21:54:23,962 - FileResourceLoader : initialization starting.
-2014-04-16 21:54:23,962 - Do unicode file recognition:  false
-2014-04-16 21:54:23,962 - FileResourceLoader : adding path '.'
-2014-04-16 21:54:23,962 - FileResourceLoader : initialization complete.
-2014-04-16 21:54:23,986 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2014-04-16 21:54:23,986 - Default ResourceManager initialization complete.
-2014-04-16 21:54:23,989 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2014-04-16 21:54:23,990 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2014-04-16 21:54:23,991 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2014-04-16 21:54:23,992 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2014-04-16 21:54:23,993 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2014-04-16 21:54:23,994 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2014-04-16 21:54:23,995 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2014-04-16 21:54:23,996 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2014-04-16 21:54:23,998 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2014-04-16 21:54:24,077 - Created '20' parsers.
-2014-04-16 21:54:24,087 - Velocimacro : initialization starting.
-2014-04-16 21:54:24,087 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2014-04-16 21:54:24,087 - Velocimacro : Default library not found.
-2014-04-16 21:54:24,087 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2014-04-16 21:54:24,087 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2014-04-16 21:54:24,087 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2014-04-16 21:54:24,088 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2014-04-16 21:54:24,088 - Velocimacro : Velocimacro : initialization complete.
-2014-04-16 21:54:24,088 - RuntimeInstance successfully initialized.
-2014-04-16 21:54:24,444 - Log4JLogChute initialized using file 'velocity.log'
-2014-04-16 21:54:24,445 - The version of log4j being used does not support the "trace" level.
-2014-04-16 21:54:24,445 - Initializing Velocity, Calling init()...
-2014-04-16 21:54:24,445 - *******************************************************************
-2014-04-16 21:54:24,445 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2014-04-16 21:54:24,445 - RuntimeInstance initializing.
-2014-04-16 21:54:24,445 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
-2014-04-16 21:54:24,445 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2014-04-16 21:54:24,445 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2014-04-16 21:54:24,445 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2014-04-16 21:54:24,445 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2014-04-16 21:54:24,446 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
-2014-04-16 21:54:24,447 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2014-04-16 21:54:24,447 - FileResourceLoader : initialization starting.
-2014-04-16 21:54:24,447 - Do unicode file recognition:  false
-2014-04-16 21:54:24,447 - FileResourceLoader : adding path '.'
-2014-04-16 21:54:24,447 - FileResourceLoader : initialization complete.
-2014-04-16 21:54:24,448 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,448 - ClasspathResourceLoader : initialization complete.
-2014-04-16 21:54:24,449 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2014-04-16 21:54:24,449 - Default ResourceManager initialization complete.
-2014-04-16 21:54:24,450 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2014-04-16 21:54:24,450 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2014-04-16 21:54:24,451 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2014-04-16 21:54:24,451 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2014-04-16 21:54:24,451 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2014-04-16 21:54:24,452 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2014-04-16 21:54:24,452 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2014-04-16 21:54:24,453 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2014-04-16 21:54:24,453 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2014-04-16 21:54:24,457 - Created '20' parsers.
-2014-04-16 21:54:24,457 - Velocimacro : initialization starting.
-2014-04-16 21:54:24,457 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2014-04-16 21:54:24,458 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
-2014-04-16 21:54:24,459 - Velocimacro : Default library not found.
-2014-04-16 21:54:24,459 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2014-04-16 21:54:24,459 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2014-04-16 21:54:24,459 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2014-04-16 21:54:24,459 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2014-04-16 21:54:24,459 - Velocimacro : Velocimacro : initialization complete.
-2014-04-16 21:54:24,459 - RuntimeInstance successfully initialized.
-2014-04-16 21:54:24,464 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,468 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,471 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ListProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,472 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ListProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,477 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,486 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,494 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,497 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,499 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/StringProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,501 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ListProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,503 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,509 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,520 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,526 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,529 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/StringProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,531 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/EnumProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,533 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ListProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,536 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,541 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,555 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,558 - ResourceManager : found /yajco/fle/generator/templates/body/AbstractConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,566 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,568 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,570 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/IntegerProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,572 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/IntegerProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,574 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,581 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,588 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,590 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,591 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/StringProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,592 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,594 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,599 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,601 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,602 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/IntegerProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,602 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/IntegerProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,603 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,606 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,611 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,614 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,616 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,619 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,625 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,626 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,627 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ReferenceProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,629 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ReferenceProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,631 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:24,634 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,110 - The version of log4j being used does not support the "trace" level.
+2014-04-17 14:16:27,110 - Initializing Velocity, Calling init()...
+2014-04-17 14:16:27,110 - *******************************************************************
+2014-04-17 14:16:27,111 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2014-04-17 14:16:27,111 - RuntimeInstance initializing.
+2014-04-17 14:16:27,111 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2014-04-17 14:16:27,111 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2014-04-17 14:16:27,111 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2014-04-17 14:16:27,111 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2014-04-17 14:16:27,111 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2014-04-17 14:16:27,113 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2014-04-17 14:16:27,115 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2014-04-17 14:16:27,116 - FileResourceLoader : initialization starting.
+2014-04-17 14:16:27,116 - Do unicode file recognition:  false
+2014-04-17 14:16:27,116 - FileResourceLoader : adding path '.'
+2014-04-17 14:16:27,116 - FileResourceLoader : initialization complete.
+2014-04-17 14:16:27,126 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2014-04-17 14:16:27,126 - Default ResourceManager initialization complete.
+2014-04-17 14:16:27,127 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2014-04-17 14:16:27,129 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2014-04-17 14:16:27,129 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2014-04-17 14:16:27,130 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2014-04-17 14:16:27,131 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2014-04-17 14:16:27,132 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2014-04-17 14:16:27,133 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2014-04-17 14:16:27,134 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2014-04-17 14:16:27,135 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2014-04-17 14:16:27,169 - Created '20' parsers.
+2014-04-17 14:16:27,175 - Velocimacro : initialization starting.
+2014-04-17 14:16:27,175 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2014-04-17 14:16:27,175 - Velocimacro : Default library not found.
+2014-04-17 14:16:27,175 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2014-04-17 14:16:27,175 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2014-04-17 14:16:27,175 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2014-04-17 14:16:27,175 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2014-04-17 14:16:27,175 - Velocimacro : Velocimacro : initialization complete.
+2014-04-17 14:16:27,175 - RuntimeInstance successfully initialized.
+2014-04-17 14:16:27,442 - Log4JLogChute initialized using file 'velocity.log'
+2014-04-17 14:16:27,442 - The version of log4j being used does not support the "trace" level.
+2014-04-17 14:16:27,442 - Initializing Velocity, Calling init()...
+2014-04-17 14:16:27,442 - *******************************************************************
+2014-04-17 14:16:27,442 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2014-04-17 14:16:27,443 - RuntimeInstance initializing.
+2014-04-17 14:16:27,443 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2014-04-17 14:16:27,443 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2014-04-17 14:16:27,443 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2014-04-17 14:16:27,443 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2014-04-17 14:16:27,443 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2014-04-17 14:16:27,444 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2014-04-17 14:16:27,444 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2014-04-17 14:16:27,446 - FileResourceLoader : initialization starting.
+2014-04-17 14:16:27,447 - Do unicode file recognition:  false
+2014-04-17 14:16:27,447 - FileResourceLoader : adding path '.'
+2014-04-17 14:16:27,447 - FileResourceLoader : initialization complete.
+2014-04-17 14:16:27,448 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,449 - ClasspathResourceLoader : initialization complete.
+2014-04-17 14:16:27,449 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2014-04-17 14:16:27,449 - Default ResourceManager initialization complete.
+2014-04-17 14:16:27,451 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2014-04-17 14:16:27,451 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2014-04-17 14:16:27,452 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2014-04-17 14:16:27,452 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2014-04-17 14:16:27,453 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2014-04-17 14:16:27,454 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2014-04-17 14:16:27,454 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2014-04-17 14:16:27,455 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2014-04-17 14:16:27,455 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2014-04-17 14:16:27,457 - Created '20' parsers.
+2014-04-17 14:16:27,458 - Velocimacro : initialization starting.
+2014-04-17 14:16:27,458 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2014-04-17 14:16:27,460 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2014-04-17 14:16:27,460 - Velocimacro : Default library not found.
+2014-04-17 14:16:27,460 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2014-04-17 14:16:27,460 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2014-04-17 14:16:27,460 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2014-04-17 14:16:27,460 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2014-04-17 14:16:27,460 - Velocimacro : Velocimacro : initialization complete.
+2014-04-17 14:16:27,460 - RuntimeInstance successfully initialized.
+2014-04-17 14:16:27,468 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,472 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,474 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ListProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,477 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ListProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,479 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,484 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,498 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,502 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,504 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/StringProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,506 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ListProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,508 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,513 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,540 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,545 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,546 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/StringProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,548 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/EnumProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,549 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ListProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,551 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,554 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,561 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,564 - ResourceManager : found /yajco/fle/generator/templates/body/AbstractConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,573 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,576 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,577 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/StringProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,579 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,583 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,597 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,600 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,602 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,605 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,612 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,614 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,616 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/IntegerProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,617 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/IntegerProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,619 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,622 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,629 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,633 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,634 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/IntegerProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,636 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/IntegerProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,637 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,642 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,654 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,658 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,660 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ReferenceProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,662 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ReferenceProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,664 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,667 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
 .ClasspathResourceLoader
-2014-04-16 21:54:24,634 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,107 - Log4JLogChute initialized using file 'velocity.log'
-2014-04-16 21:54:46,107 - The version of log4j being used does not support the "trace" level.
-2014-04-16 21:54:46,107 - Initializing Velocity, Calling init()...
-2014-04-16 21:54:46,107 - *******************************************************************
-2014-04-16 21:54:46,107 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2014-04-16 21:54:46,107 - RuntimeInstance initializing.
-2014-04-16 21:54:46,107 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
-2014-04-16 21:54:46,107 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2014-04-16 21:54:46,107 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2014-04-16 21:54:46,107 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2014-04-16 21:54:46,107 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2014-04-16 21:54:46,109 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
-2014-04-16 21:54:46,112 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2014-04-16 21:54:46,113 - FileResourceLoader : initialization starting.
-2014-04-16 21:54:46,113 - Do unicode file recognition:  false
-2014-04-16 21:54:46,113 - FileResourceLoader : adding path '.'
-2014-04-16 21:54:46,113 - FileResourceLoader : initialization complete.
-2014-04-16 21:54:46,125 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2014-04-16 21:54:46,125 - Default ResourceManager initialization complete.
-2014-04-16 21:54:46,127 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2014-04-16 21:54:46,129 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2014-04-16 21:54:46,130 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2014-04-16 21:54:46,132 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2014-04-16 21:54:46,133 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2014-04-16 21:54:46,135 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2014-04-16 21:54:46,137 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2014-04-16 21:54:46,139 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2014-04-16 21:54:46,141 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2014-04-16 21:54:46,178 - Created '20' parsers.
-2014-04-16 21:54:46,185 - Velocimacro : initialization starting.
-2014-04-16 21:54:46,185 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2014-04-16 21:54:46,186 - Velocimacro : Default library not found.
-2014-04-16 21:54:46,186 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2014-04-16 21:54:46,186 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2014-04-16 21:54:46,186 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2014-04-16 21:54:46,186 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2014-04-16 21:54:46,186 - Velocimacro : Velocimacro : initialization complete.
-2014-04-16 21:54:46,186 - RuntimeInstance successfully initialized.
-2014-04-16 21:54:46,464 - Log4JLogChute initialized using file 'velocity.log'
-2014-04-16 21:54:46,464 - Log4JLogChute initialized using file 'velocity.log'
-2014-04-16 21:54:46,464 - The version of log4j being used does not support the "trace" level.
-2014-04-16 21:54:46,464 - The version of log4j being used does not support the "trace" level.
-2014-04-16 21:54:46,464 - Initializing Velocity, Calling init()...
-2014-04-16 21:54:46,464 - Initializing Velocity, Calling init()...
-2014-04-16 21:54:46,464 - *******************************************************************
-2014-04-16 21:54:46,464 - *******************************************************************
-2014-04-16 21:54:46,464 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2014-04-16 21:54:46,464 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2014-04-16 21:54:46,464 - RuntimeInstance initializing.
-2014-04-16 21:54:46,464 - RuntimeInstance initializing.
-2014-04-16 21:54:46,464 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
-2014-04-16 21:54:46,464 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
-2014-04-16 21:54:46,464 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2014-04-16 21:54:46,464 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2014-04-16 21:54:46,464 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2014-04-16 21:54:46,464 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2014-04-16 21:54:46,464 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2014-04-16 21:54:46,464 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2014-04-16 21:54:46,464 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2014-04-16 21:54:46,464 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2014-04-16 21:54:46,465 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
-2014-04-16 21:54:46,465 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
-2014-04-16 21:54:46,465 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2014-04-16 21:54:46,465 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2014-04-16 21:54:46,465 - FileResourceLoader : initialization starting.
-2014-04-16 21:54:46,465 - FileResourceLoader : initialization starting.
-2014-04-16 21:54:46,466 - Do unicode file recognition:  false
-2014-04-16 21:54:46,466 - Do unicode file recognition:  false
-2014-04-16 21:54:46,466 - FileResourceLoader : adding path '.'
-2014-04-16 21:54:46,466 - FileResourceLoader : adding path '.'
-2014-04-16 21:54:46,466 - FileResourceLoader : initialization complete.
-2014-04-16 21:54:46,466 - FileResourceLoader : initialization complete.
-2014-04-16 21:54:46,467 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,467 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,467 - ClasspathResourceLoader : initialization complete.
-2014-04-16 21:54:46,467 - ClasspathResourceLoader : initialization complete.
-2014-04-16 21:54:46,468 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2014-04-16 21:54:46,468 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2014-04-16 21:54:46,468 - Default ResourceManager initialization complete.
-2014-04-16 21:54:46,468 - Default ResourceManager initialization complete.
-2014-04-16 21:54:46,469 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2014-04-16 21:54:46,469 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2014-04-16 21:54:46,469 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2014-04-16 21:54:46,469 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2014-04-16 21:54:46,470 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2014-04-16 21:54:46,470 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2014-04-16 21:54:46,470 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2014-04-16 21:54:46,470 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2014-04-16 21:54:46,471 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2014-04-16 21:54:46,471 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2014-04-16 21:54:46,471 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2014-04-16 21:54:46,471 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2014-04-16 21:54:46,472 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2014-04-16 21:54:46,472 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2014-04-16 21:54:46,472 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2014-04-16 21:54:46,472 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2014-04-16 21:54:46,473 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2014-04-16 21:54:46,473 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2014-04-16 21:54:46,477 - Created '20' parsers.
-2014-04-16 21:54:46,477 - Created '20' parsers.
-2014-04-16 21:54:46,478 - Velocimacro : initialization starting.
-2014-04-16 21:54:46,478 - Velocimacro : initialization starting.
-2014-04-16 21:54:46,478 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2014-04-16 21:54:46,478 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2014-04-16 21:54:46,483 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
-2014-04-16 21:54:46,483 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
-2014-04-16 21:54:46,483 - Velocimacro : Default library not found.
-2014-04-16 21:54:46,483 - Velocimacro : Default library not found.
-2014-04-16 21:54:46,483 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2014-04-16 21:54:46,483 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2014-04-16 21:54:46,483 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2014-04-16 21:54:46,483 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2014-04-16 21:54:46,483 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2014-04-16 21:54:46,483 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2014-04-16 21:54:46,483 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2014-04-16 21:54:46,483 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2014-04-16 21:54:46,483 - Velocimacro : Velocimacro : initialization complete.
-2014-04-16 21:54:46,483 - Velocimacro : Velocimacro : initialization complete.
-2014-04-16 21:54:46,483 - RuntimeInstance successfully initialized.
-2014-04-16 21:54:46,483 - RuntimeInstance successfully initialized.
-2014-04-16 21:54:46,490 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,490 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,495 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,495 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,497 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ListProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,497 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ListProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,499 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ListProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,499 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ListProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,513 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,513 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,519 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,519 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,528 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,528 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,532 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,532 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,540 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/StringProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,540 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/StringProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,546 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ListProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,546 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ListProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,549 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,549 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,553 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,553 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,585 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,585 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,591 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,591 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,593 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/StringProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,593 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/StringProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,595 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/EnumProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,595 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/EnumProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,597 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ListProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,597 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ListProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,600 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,600 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,605 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,605 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,612 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,612 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,615 - ResourceManager : found /yajco/fle/generator/templates/body/AbstractConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,615 - ResourceManager : found /yajco/fle/generator/templates/body/AbstractConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,623 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,623 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,626 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,626 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,628 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/IntegerProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,628 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/IntegerProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,629 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/IntegerProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,629 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/IntegerProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,631 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,631 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,635 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,635 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,640 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,640 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,642 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,642 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,642 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/StringProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,642 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/StringProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,644 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,644 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,646 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,646 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,650 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,650 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,653 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,653 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,654 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/IntegerProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,654 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/IntegerProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,655 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/IntegerProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,655 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/IntegerProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,658 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,658 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,670 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,670 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,675 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,675 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,678 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,678 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,680 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,680 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,683 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,683 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,690 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,690 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,692 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,692 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,694 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ReferenceProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,694 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ReferenceProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,697 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ReferenceProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,697 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ReferenceProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,699 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,699 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,705 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 21:54:46,705 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:42,680 - Log4JLogChute initialized using file 'velocity.log'
-2014-04-16 22:05:42,681 - The version of log4j being used does not support the "trace" level.
-2014-04-16 22:05:42,681 - Initializing Velocity, Calling init()...
-2014-04-16 22:05:42,681 - *******************************************************************
-2014-04-16 22:05:42,681 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2014-04-16 22:05:42,681 - RuntimeInstance initializing.
-2014-04-16 22:05:42,681 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
-2014-04-16 22:05:42,681 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2014-04-16 22:05:42,681 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2014-04-16 22:05:42,681 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2014-04-16 22:05:42,681 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2014-04-16 22:05:42,683 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
-2014-04-16 22:05:42,686 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2014-04-16 22:05:42,688 - FileResourceLoader : initialization starting.
-2014-04-16 22:05:42,688 - Do unicode file recognition:  false
-2014-04-16 22:05:42,688 - FileResourceLoader : adding path '.'
-2014-04-16 22:05:42,688 - FileResourceLoader : initialization complete.
-2014-04-16 22:05:42,709 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2014-04-16 22:05:42,709 - Default ResourceManager initialization complete.
-2014-04-16 22:05:42,711 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2014-04-16 22:05:42,713 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2014-04-16 22:05:42,714 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2014-04-16 22:05:42,716 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2014-04-16 22:05:42,717 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2014-04-16 22:05:42,718 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2014-04-16 22:05:42,720 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2014-04-16 22:05:42,722 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2014-04-16 22:05:42,724 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2014-04-16 22:05:42,819 - Created '20' parsers.
-2014-04-16 22:05:42,835 - Velocimacro : initialization starting.
-2014-04-16 22:05:42,835 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2014-04-16 22:05:42,835 - Velocimacro : Default library not found.
-2014-04-16 22:05:42,835 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2014-04-16 22:05:42,835 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2014-04-16 22:05:42,835 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2014-04-16 22:05:42,835 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2014-04-16 22:05:42,835 - Velocimacro : Velocimacro : initialization complete.
-2014-04-16 22:05:42,835 - RuntimeInstance successfully initialized.
-2014-04-16 22:05:43,149 - Log4JLogChute initialized using file 'velocity.log'
-2014-04-16 22:05:43,149 - Log4JLogChute initialized using file 'velocity.log'
-2014-04-16 22:05:43,149 - The version of log4j being used does not support the "trace" level.
-2014-04-16 22:05:43,149 - The version of log4j being used does not support the "trace" level.
-2014-04-16 22:05:43,149 - Initializing Velocity, Calling init()...
-2014-04-16 22:05:43,149 - Initializing Velocity, Calling init()...
-2014-04-16 22:05:43,149 - *******************************************************************
-2014-04-16 22:05:43,149 - *******************************************************************
-2014-04-16 22:05:43,149 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2014-04-16 22:05:43,149 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2014-04-16 22:05:43,149 - RuntimeInstance initializing.
-2014-04-16 22:05:43,149 - RuntimeInstance initializing.
-2014-04-16 22:05:43,149 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
-2014-04-16 22:05:43,149 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
-2014-04-16 22:05:43,149 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2014-04-16 22:05:43,149 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2014-04-16 22:05:43,149 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2014-04-16 22:05:43,149 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2014-04-16 22:05:43,149 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2014-04-16 22:05:43,149 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2014-04-16 22:05:43,149 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2014-04-16 22:05:43,149 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2014-04-16 22:05:43,150 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
-2014-04-16 22:05:43,150 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
-2014-04-16 22:05:43,151 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2014-04-16 22:05:43,151 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2014-04-16 22:05:43,151 - FileResourceLoader : initialization starting.
-2014-04-16 22:05:43,151 - FileResourceLoader : initialization starting.
-2014-04-16 22:05:43,151 - Do unicode file recognition:  false
-2014-04-16 22:05:43,151 - Do unicode file recognition:  false
-2014-04-16 22:05:43,151 - FileResourceLoader : adding path '.'
-2014-04-16 22:05:43,151 - FileResourceLoader : adding path '.'
-2014-04-16 22:05:43,151 - FileResourceLoader : initialization complete.
-2014-04-16 22:05:43,151 - FileResourceLoader : initialization complete.
-2014-04-16 22:05:43,152 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,152 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,152 - ClasspathResourceLoader : initialization complete.
-2014-04-16 22:05:43,152 - ClasspathResourceLoader : initialization complete.
-2014-04-16 22:05:43,153 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2014-04-16 22:05:43,153 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2014-04-16 22:05:43,153 - Default ResourceManager initialization complete.
-2014-04-16 22:05:43,153 - Default ResourceManager initialization complete.
-2014-04-16 22:05:43,154 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2014-04-16 22:05:43,154 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2014-04-16 22:05:43,154 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2014-04-16 22:05:43,154 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2014-04-16 22:05:43,155 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2014-04-16 22:05:43,155 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2014-04-16 22:05:43,156 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2014-04-16 22:05:43,156 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2014-04-16 22:05:43,156 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2014-04-16 22:05:43,156 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2014-04-16 22:05:43,157 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2014-04-16 22:05:43,157 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2014-04-16 22:05:43,157 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2014-04-16 22:05:43,157 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2014-04-16 22:05:43,158 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2014-04-16 22:05:43,158 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2014-04-16 22:05:43,158 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2014-04-16 22:05:43,158 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2014-04-16 22:05:43,160 - Created '20' parsers.
-2014-04-16 22:05:43,160 - Created '20' parsers.
-2014-04-16 22:05:43,160 - Velocimacro : initialization starting.
-2014-04-16 22:05:43,160 - Velocimacro : initialization starting.
-2014-04-16 22:05:43,160 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2014-04-16 22:05:43,160 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2014-04-16 22:05:43,162 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
-2014-04-16 22:05:43,162 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
-2014-04-16 22:05:43,162 - Velocimacro : Default library not found.
-2014-04-16 22:05:43,162 - Velocimacro : Default library not found.
-2014-04-16 22:05:43,162 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2014-04-16 22:05:43,162 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2014-04-16 22:05:43,162 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2014-04-16 22:05:43,162 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2014-04-16 22:05:43,162 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2014-04-16 22:05:43,162 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2014-04-16 22:05:43,162 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2014-04-16 22:05:43,162 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2014-04-16 22:05:43,162 - Velocimacro : Velocimacro : initialization complete.
-2014-04-16 22:05:43,162 - Velocimacro : Velocimacro : initialization complete.
-2014-04-16 22:05:43,162 - RuntimeInstance successfully initialized.
-2014-04-16 22:05:43,162 - RuntimeInstance successfully initialized.
-2014-04-16 22:05:43,183 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,183 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,189 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,189 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,191 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ListProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,191 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ListProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,195 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ListProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,195 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ListProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,198 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,198 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,203 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,203 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,242 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,242 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,245 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,245 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,247 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/StringProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,247 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/StringProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,249 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ListProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,249 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ListProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,252 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,252 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,255 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,255 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,265 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,265 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,270 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,270 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,272 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/StringProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,272 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/StringProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,274 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/EnumProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,274 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/EnumProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,276 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ListProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,276 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ListProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,279 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,279 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,284 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,284 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,299 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,299 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,301 - ResourceManager : found /yajco/fle/generator/templates/body/AbstractConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,301 - ResourceManager : found /yajco/fle/generator/templates/body/AbstractConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,311 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,311 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,314 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,314 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,316 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/IntegerProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,316 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/IntegerProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,317 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/IntegerProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,317 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/IntegerProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,318 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,318 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,321 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,321 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,327 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,327 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,328 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,328 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,329 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/IntegerProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,329 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/IntegerProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,331 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/IntegerProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,331 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/IntegerProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,332 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,332 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,335 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,335 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,339 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,339 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,341 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,341 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,342 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,342 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,345 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,345 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,351 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,351 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,354 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,354 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,355 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/StringProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,355 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/StringProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,356 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,356 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,359 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,359 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,364 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,364 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,366 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,366 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,368 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ReferenceProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,368 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ReferenceProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,369 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ReferenceProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,369 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ReferenceProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,371 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,371 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,375 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:05:43,375 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,469 - Log4JLogChute initialized using file 'velocity.log'
-2014-04-16 22:06:31,470 - The version of log4j being used does not support the "trace" level.
-2014-04-16 22:06:31,470 - Initializing Velocity, Calling init()...
-2014-04-16 22:06:31,470 - *******************************************************************
-2014-04-16 22:06:31,470 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2014-04-16 22:06:31,470 - RuntimeInstance initializing.
-2014-04-16 22:06:31,470 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
-2014-04-16 22:06:31,470 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2014-04-16 22:06:31,470 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2014-04-16 22:06:31,470 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2014-04-16 22:06:31,470 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2014-04-16 22:06:31,473 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
-2014-04-16 22:06:31,478 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2014-04-16 22:06:31,479 - FileResourceLoader : initialization starting.
-2014-04-16 22:06:31,479 - Do unicode file recognition:  false
-2014-04-16 22:06:31,480 - FileResourceLoader : adding path '.'
-2014-04-16 22:06:31,480 - FileResourceLoader : initialization complete.
-2014-04-16 22:06:31,493 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2014-04-16 22:06:31,493 - Default ResourceManager initialization complete.
-2014-04-16 22:06:31,495 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2014-04-16 22:06:31,496 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2014-04-16 22:06:31,498 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2014-04-16 22:06:31,500 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2014-04-16 22:06:31,501 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2014-04-16 22:06:31,505 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2014-04-16 22:06:31,507 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2014-04-16 22:06:31,512 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2014-04-16 22:06:31,514 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2014-04-16 22:06:31,617 - Created '20' parsers.
-2014-04-16 22:06:31,626 - Velocimacro : initialization starting.
-2014-04-16 22:06:31,626 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2014-04-16 22:06:31,626 - Velocimacro : Default library not found.
-2014-04-16 22:06:31,627 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2014-04-16 22:06:31,627 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2014-04-16 22:06:31,627 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2014-04-16 22:06:31,627 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2014-04-16 22:06:31,627 - Velocimacro : Velocimacro : initialization complete.
-2014-04-16 22:06:31,627 - RuntimeInstance successfully initialized.
-2014-04-16 22:06:31,873 - Log4JLogChute initialized using file 'velocity.log'
-2014-04-16 22:06:31,873 - Log4JLogChute initialized using file 'velocity.log'
-2014-04-16 22:06:31,873 - The version of log4j being used does not support the "trace" level.
-2014-04-16 22:06:31,873 - The version of log4j being used does not support the "trace" level.
-2014-04-16 22:06:31,873 - Initializing Velocity, Calling init()...
-2014-04-16 22:06:31,873 - Initializing Velocity, Calling init()...
-2014-04-16 22:06:31,873 - *******************************************************************
-2014-04-16 22:06:31,873 - *******************************************************************
-2014-04-16 22:06:31,873 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2014-04-16 22:06:31,873 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2014-04-16 22:06:31,873 - RuntimeInstance initializing.
-2014-04-16 22:06:31,873 - RuntimeInstance initializing.
-2014-04-16 22:06:31,873 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
-2014-04-16 22:06:31,873 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
-2014-04-16 22:06:31,874 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2014-04-16 22:06:31,874 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2014-04-16 22:06:31,874 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2014-04-16 22:06:31,874 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2014-04-16 22:06:31,874 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2014-04-16 22:06:31,874 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2014-04-16 22:06:31,874 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2014-04-16 22:06:31,874 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2014-04-16 22:06:31,874 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
-2014-04-16 22:06:31,874 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
-2014-04-16 22:06:31,875 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2014-04-16 22:06:31,875 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2014-04-16 22:06:31,875 - FileResourceLoader : initialization starting.
-2014-04-16 22:06:31,875 - FileResourceLoader : initialization starting.
-2014-04-16 22:06:31,875 - Do unicode file recognition:  false
-2014-04-16 22:06:31,875 - Do unicode file recognition:  false
-2014-04-16 22:06:31,875 - FileResourceLoader : adding path '.'
-2014-04-16 22:06:31,875 - FileResourceLoader : adding path '.'
-2014-04-16 22:06:31,875 - FileResourceLoader : initialization complete.
-2014-04-16 22:06:31,875 - FileResourceLoader : initialization complete.
-2014-04-16 22:06:31,877 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,877 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,877 - ClasspathResourceLoader : initialization complete.
-2014-04-16 22:06:31,877 - ClasspathResourceLoader : initialization complete.
-2014-04-16 22:06:31,877 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2014-04-16 22:06:31,877 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2014-04-16 22:06:31,877 - Default ResourceManager initialization complete.
-2014-04-16 22:06:31,877 - Default ResourceManager initialization complete.
-2014-04-16 22:06:31,878 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2014-04-16 22:06:31,878 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2014-04-16 22:06:31,879 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2014-04-16 22:06:31,879 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2014-04-16 22:06:31,879 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2014-04-16 22:06:31,879 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2014-04-16 22:06:31,880 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2014-04-16 22:06:31,880 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2014-04-16 22:06:31,880 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2014-04-16 22:06:31,880 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2014-04-16 22:06:31,881 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2014-04-16 22:06:31,881 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2014-04-16 22:06:31,881 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2014-04-16 22:06:31,881 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2014-04-16 22:06:31,882 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2014-04-16 22:06:31,882 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2014-04-16 22:06:31,882 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2014-04-16 22:06:31,882 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2014-04-16 22:06:31,885 - Created '20' parsers.
-2014-04-16 22:06:31,885 - Created '20' parsers.
-2014-04-16 22:06:31,886 - Velocimacro : initialization starting.
-2014-04-16 22:06:31,886 - Velocimacro : initialization starting.
-2014-04-16 22:06:31,886 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2014-04-16 22:06:31,886 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2014-04-16 22:06:31,888 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
-2014-04-16 22:06:31,888 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
-2014-04-16 22:06:31,888 - Velocimacro : Default library not found.
-2014-04-16 22:06:31,888 - Velocimacro : Default library not found.
-2014-04-16 22:06:31,888 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2014-04-16 22:06:31,888 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2014-04-16 22:06:31,889 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2014-04-16 22:06:31,889 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2014-04-16 22:06:31,889 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2014-04-16 22:06:31,889 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2014-04-16 22:06:31,889 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2014-04-16 22:06:31,889 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2014-04-16 22:06:31,889 - Velocimacro : Velocimacro : initialization complete.
-2014-04-16 22:06:31,889 - Velocimacro : Velocimacro : initialization complete.
-2014-04-16 22:06:31,889 - RuntimeInstance successfully initialized.
-2014-04-16 22:06:31,889 - RuntimeInstance successfully initialized.
-2014-04-16 22:06:31,896 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,896 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,901 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,901 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,903 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ListProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,903 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ListProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,905 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ListProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,905 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ListProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,906 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,906 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,910 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,910 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,929 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,929 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,932 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,932 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,934 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/StringProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,934 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/StringProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,936 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ListProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,936 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ListProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,939 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,939 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,943 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,943 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,950 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,950 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,958 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,958 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,960 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/StringProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,960 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/StringProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,962 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/EnumProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,962 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/EnumProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,965 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ListProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,965 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ListProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,968 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,968 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,973 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,973 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,979 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,979 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,983 - ResourceManager : found /yajco/fle/generator/templates/body/AbstractConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,983 - ResourceManager : found /yajco/fle/generator/templates/body/AbstractConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,995 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,995 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,997 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,997 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,999 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/StringProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:31,999 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/StringProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,001 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,001 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,005 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,005 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,016 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,016 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,019 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,019 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,021 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/IntegerProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,021 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/IntegerProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,022 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/IntegerProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,022 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/IntegerProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,024 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,024 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,027 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,027 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,030 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,030 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,032 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,032 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,033 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,033 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,035 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,035 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,039 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,039 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,040 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,040 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,041 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/IntegerProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,041 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/IntegerProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,042 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/IntegerProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,042 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/IntegerProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,044 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,044 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,053 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,053 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,061 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,061 - ResourceManager : found /yajco/fle/generator/templates/imports/Imports.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,063 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,063 - ResourceManager : found /yajco/fle/generator/templates/body/ConcreteConcept.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,065 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ReferenceProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,065 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ReferenceProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,067 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ReferenceProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,067 - ResourceManager : found /yajco/fle/generator/templates/body/properties/declarations/ReferenceProperty.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,069 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,069 - ResourceManager : found /yajco/fle/generator/templates/body/properties/ConceptPanelConstructor.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,071 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2014-04-16 22:06:32,071 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-04-17 14:16:27,667 - ResourceManager : found /yajco/fle/generator/templates/body/properties/PanelAccessorImplementation.vsl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader

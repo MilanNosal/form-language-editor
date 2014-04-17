@@ -58,14 +58,4 @@ public class ReferencePanel <T> extends AbstractAccessiblePanel<T> {
     public void reset() {
         valuesCmbbx.setSelectedIndex(0);
     }
-
-    @Override
-    public void setLabel(String label) {
-        valuesCmbbx.setName(label);
-    }
-
-    @Override
-    public void setDescription(String description) {
-        valuesCmbbx.setToolTipText(description);
-    }
 }

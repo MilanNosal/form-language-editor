@@ -2,10 +2,13 @@ package yajco.fle.panels;
 
 import java.util.LinkedList;
 import java.util.List;
+import javax.swing.JDialog;
+import javax.swing.SwingUtilities;
 
 /**
  *
  * @author Milan
+ * @param <T>
  */
 public abstract class AbstractConceptPanelBase<T> extends AbstractAccessiblePanel<T> {
 
@@ -14,16 +17,17 @@ public abstract class AbstractConceptPanelBase<T> extends AbstractAccessiblePane
      */
     public AbstractConceptPanelBase() {
         initComponents();
+
     }
-    
+
     protected void registerSubtype(String label, Class<? extends T> clazz, AbstractAccessiblePanel<? extends T> conceptPanel) {
         conceptsComboBox.addItem(label);
         classes.add(clazz);
         panels.add(conceptPanel);
     }
-    
+
     protected final List<Class<? extends T>> classes = new LinkedList<Class<? extends T>>();
-    
+
     protected final List<AbstractAccessiblePanel<? extends T>> panels
             = new LinkedList<AbstractAccessiblePanel<? extends T>>();
 
@@ -37,16 +41,36 @@ public abstract class AbstractConceptPanelBase<T> extends AbstractAccessiblePane
     private void initComponents() {
 
         conceptsComboBox = new javax.swing.JComboBox();
+        contentPanel = new javax.swing.JPanel();
 
         setLayout(new java.awt.BorderLayout());
 
-        conceptsComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        conceptsComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                conceptsComboBoxActionPerformed(evt);
+            }
+        });
         add(conceptsComboBox, java.awt.BorderLayout.PAGE_START);
+
+        contentPanel.setLayout(new java.awt.BorderLayout());
+        add(contentPanel, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void conceptsComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_conceptsComboBoxActionPerformed
+        if (panels.size() > 0) {
+            contentPanel.removeAll();
+            contentPanel.add(panels.get(conceptsComboBox.getSelectedIndex()));
+            JDialog dialog = ((JDialog) SwingUtilities.getWindowAncestor(this));
+            if (dialog != null) {
+                dialog.pack();
+            }
+        }
+    }//GEN-LAST:event_conceptsComboBoxActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     protected javax.swing.JComboBox conceptsComboBox;
+    private javax.swing.JPanel contentPanel;
     // End of variables declaration//GEN-END:variables
 
     @Override
@@ -57,19 +81,9 @@ public abstract class AbstractConceptPanelBase<T> extends AbstractAccessiblePane
 
     @Override
     public void reset() {
-        for(AbstractAccessiblePanel<? extends T> panel : panels) {
+        for (AbstractAccessiblePanel<? extends T> panel : panels) {
             panel.reset();
         }
-    }
-
-    @Override
-    public void setLabel(String label) {
-        // TODO: nedat label hore do okienka?
-        System.err.println("AbstractConceptPanelBase does not support setting label.");
-    }
-
-    @Override
-    public void setDescription(String description) {
-        System.err.println("AbstractConceptPanelBase does not support setting description.");
+        conceptsComboBoxActionPerformed(null);
     }
 }
