@@ -3,6 +3,9 @@ package yajco.fle.panels;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.DefaultListModel;
+import javax.swing.ListSelectionModel;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 
 /** *  @author Michaela Bačíková
  * @param <T> type of the list item*/
@@ -18,6 +21,16 @@ public class ListPanel<T> extends AbstractAccessiblePanel<List<T>> {
         //model sa na list nastavi v initComponents
         listModel = new DefaultListModel();
         initComponents();
+        
+        ListSelectionModel listSelectionModel = list.getSelectionModel();
+        listSelectionModel.addListSelectionListener(new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent e) {
+                 ListSelectionModel lsm = (ListSelectionModel) e.getSource();
+                editBttn.setEnabled(!lsm.isSelectionEmpty());
+                deleteBttn.setEnabled(!lsm.isSelectionEmpty());
+            }
+        });
     }
 
     @SuppressWarnings("unchecked")
@@ -58,6 +71,7 @@ public class ListPanel<T> extends AbstractAccessiblePanel<List<T>> {
         editBttn.setToolTipText("Edit");
         editBttn.setBorderPainted(false);
         editBttn.setContentAreaFilled(false);
+        editBttn.setEnabled(false);
         editBttn.setMargin(new java.awt.Insets(0, 0, 0, 0));
         editBttn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/yajco/fle/panels/icons/edit_pressed.png"))); // NOI18N
         editBttn.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/yajco/fle/panels/icons/edit_selected.png"))); // NOI18N
@@ -72,6 +86,7 @@ public class ListPanel<T> extends AbstractAccessiblePanel<List<T>> {
         deleteBttn.setToolTipText("Delete");
         deleteBttn.setBorderPainted(false);
         deleteBttn.setContentAreaFilled(false);
+        deleteBttn.setEnabled(false);
         deleteBttn.setMargin(new java.awt.Insets(0, 0, 0, 0));
         deleteBttn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/yajco/fle/panels/icons/delete_pressed.png"))); // NOI18N
         deleteBttn.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/yajco/fle/panels/icons/delete_selected.png"))); // NOI18N
