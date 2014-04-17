@@ -46,6 +46,7 @@ public abstract class AbstractConceptPanelBase<T> extends AbstractAccessiblePane
 
         setLayout(new java.awt.BorderLayout());
 
+        conceptsComboBox.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         conceptsComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 conceptsComboBoxActionPerformed(evt);
@@ -53,6 +54,7 @@ public abstract class AbstractConceptPanelBase<T> extends AbstractAccessiblePane
         });
         add(conceptsComboBox, java.awt.BorderLayout.PAGE_START);
 
+        contentPanel.setOpaque(false);
         contentPanel.setLayout(new java.awt.BorderLayout());
         add(contentPanel, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents

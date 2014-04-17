@@ -21,23 +21,19 @@ public class BooleanPanel extends AbstractAccessiblePanel<Boolean> {
 
         booleanChckbx = new javax.swing.JCheckBox();
 
+        setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
         booleanChckbx.setText("Boolean value text");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(booleanChckbx)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(booleanChckbx)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(booleanChckbx)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(booleanChckbx)
         );
     }// </editor-fold>//GEN-END:initComponents
 
