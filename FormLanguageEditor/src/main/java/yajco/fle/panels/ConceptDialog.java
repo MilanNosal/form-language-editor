@@ -1,5 +1,6 @@
 package yajco.fle.panels;
 
+import java.awt.Dimension;
 import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -15,6 +16,8 @@ import yajco.fle.panels.interfaces.Labeled;
 public class ConceptDialog extends javax.swing.JDialog {
 
     private Point lastPoint, lastPosition;
+
+    private Dimension lastDimension;
 
     private boolean okPressed = false;
 
@@ -70,6 +73,7 @@ public class ConceptDialog extends javax.swing.JDialog {
         okButton = new javax.swing.JButton();
         resetButton = new javax.swing.JButton();
         cancelButton = new javax.swing.JButton();
+        resizePanel = new javax.swing.JLabel();
 
         setModal(true);
         setUndecorated(true);
@@ -172,6 +176,18 @@ public class ConceptDialog extends javax.swing.JDialog {
             }
         });
 
+        resizePanel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/yajco/fle/panels/icons/resize.png"))); // NOI18N
+        resizePanel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                resizePanelMousePressed(evt);
+            }
+        });
+        resizePanel.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                resizePanelMouseDragged(evt);
+            }
+        });
+
         javax.swing.GroupLayout buttonPanelLayout = new javax.swing.GroupLayout(buttonPanel);
         buttonPanel.setLayout(buttonPanelLayout);
         buttonPanelLayout.setHorizontalGroup(
@@ -184,16 +200,20 @@ public class ConceptDialog extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cancelButton)
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, buttonPanelLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(resizePanel))
         );
         buttonPanelLayout.setVerticalGroup(
             buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, buttonPanelLayout.createSequentialGroup()
+            .addGroup(buttonPanelLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(okButton)
                     .addComponent(resetButton)
                     .addComponent(cancelButton))
-                .addContainerGap())
+                .addGap(3, 3, 3)
+                .addComponent(resizePanel))
         );
 
         jPanel1.add(buttonPanel, java.awt.BorderLayout.PAGE_END);
@@ -226,6 +246,18 @@ public class ConceptDialog extends javax.swing.JDialog {
         setLocation(lastPosition.x - lastPoint.x + point.x, lastPosition.y - lastPoint.y + point.y);
     }//GEN-LAST:event_topPanelMouseDragged
 
+    private void resizePanelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_resizePanelMousePressed
+        lastPoint = evt.getPoint();
+        lastDimension = getSize();
+        SwingUtilities.convertPointToScreen(lastPoint, evt.getComponent());
+    }//GEN-LAST:event_resizePanelMousePressed
+
+    private void resizePanelMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_resizePanelMouseDragged
+        Point point = evt.getPoint();
+        SwingUtilities.convertPointToScreen(point, evt.getComponent());
+        setSize(new Dimension(lastDimension.width - lastPoint.x + point.x, lastDimension.height - lastPoint.y + point.y));
+    }//GEN-LAST:event_resizePanelMouseDragged
+
     public boolean showDialog() {
         setVisible(true);
         return okPressed;
@@ -239,6 +271,7 @@ public class ConceptDialog extends javax.swing.JDialog {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton okButton;
     private javax.swing.JButton resetButton;
+    private javax.swing.JLabel resizePanel;
     private javax.swing.JScrollPane scrollPane;
     private javax.swing.JLabel titleLabel;
     private javax.swing.JPanel topPanel;
