@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import javax.swing.JComponent;
 import javax.swing.KeyStroke;
+import yajco.fle.panels.interfaces.Labeled;
 
 /**
  * @author Michaela Bačíková
@@ -37,7 +38,11 @@ public class ConceptDialog extends javax.swing.JDialog {
         };
         cancelButton.addActionListener(cancelListener);
         rootPane.registerKeyboardAction(cancelListener, 
-                KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_IN_FOCUSED_WINDOW);                
+                KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_IN_FOCUSED_WINDOW);
+        
+        if(content instanceof Labeled) {
+            this.setTitle(((Labeled) content).getLabel());
+        }
     }
 
     @SuppressWarnings("unchecked")

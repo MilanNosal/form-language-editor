@@ -2,13 +2,14 @@ package yajco.fle.panels;
 
 import java.awt.GridBagConstraints;
 import javax.swing.JLabel;
+import yajco.fle.panels.interfaces.Labeled;
 
 /**
  *
  * @author Milan
  * @param <T> type
  */
-public abstract class ConcreteConceptPanelBase<T> extends AbstractAccessiblePanel<T> {
+public abstract class ConcreteConceptPanelBase<T> extends AbstractAccessiblePanel<T> implements Labeled {
 
     /**
      * Creates new form ConceptPanelBase
