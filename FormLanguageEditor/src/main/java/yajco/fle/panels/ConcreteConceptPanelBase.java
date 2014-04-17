@@ -1,7 +1,7 @@
 package yajco.fle.panels;
 
 import java.awt.GridBagConstraints;
-import java.awt.Label;
+import javax.swing.JLabel;
 
 /**
  *
@@ -23,7 +23,8 @@ public abstract class ConcreteConceptPanelBase<T> extends AbstractAccessiblePane
         gridBagConstraints.gridx = 0;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.FIRST_LINE_START;
         //gridBagConstraints.gridy = 0;
-        add(new Label(label), gridBagConstraints);
+        add(new JLabel(label), gridBagConstraints);
+        panel.setToolTipText(label);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.FIRST_LINE_START;

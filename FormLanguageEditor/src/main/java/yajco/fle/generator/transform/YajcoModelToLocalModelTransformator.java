@@ -2,11 +2,11 @@ package yajco.fle.generator.transform;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeSet;
 import yajco.fle.model.AbstractConcept;
 import yajco.fle.model.ConcreteConcept;
 import yajco.fle.model.Property;
@@ -82,7 +82,7 @@ public class YajcoModelToLocalModelTransformator {
         if (descendants.isEmpty()) {
             newConcept = new ConcreteConcept(name, className, new ArrayList<Property>());
         } else {
-            newConcept = new AbstractConcept(name, className, new HashSet<yajco.fle.model.Concept>());
+            newConcept = new AbstractConcept(name, className, /* Subtypes. */ new TreeSet<yajco.fle.model.Concept>());
         }
         newConcept.setSourceElement(concept);
 
@@ -185,7 +185,7 @@ public class YajcoModelToLocalModelTransformator {
         } else if (type instanceof ReferenceType) {
             ReferenceType referenceType = (ReferenceType) type;
             if (referenceType.getConcept().getPattern(yajco.model.pattern.impl.Enum.class) != null) {
-                Set<String> notations = new HashSet<>();
+                Set<String> notations = new TreeSet<>();
                 for (Notation notation : referenceType.getConcept().getConcreteSyntax()) {
                     notations.add(((TokenPart) notation.getParts().get(0)).getToken());
                 }

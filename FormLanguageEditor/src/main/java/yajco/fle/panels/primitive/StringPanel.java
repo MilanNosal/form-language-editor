@@ -52,14 +52,4 @@ public class StringPanel extends AbstractAccessiblePanel<String> {
     public void reset() {
         stringTxtfld.setText("");
     }
-
-    @Override
-    public void setLabel(String label) {
-        stringTxtfld.setName(label);
-    }
-
-    @Override
-    public void setDescription(String description) {
-        stringTxtfld.setToolTipText(description);
-    }
 }

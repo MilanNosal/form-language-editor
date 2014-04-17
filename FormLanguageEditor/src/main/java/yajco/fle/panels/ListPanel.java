@@ -177,16 +177,6 @@ public class ListPanel<T> extends AbstractAccessiblePanel<List<T>> {
         listModel.removeAllElements();
     }
 
-    @Override
-    public void setLabel(String label) {
-        list.setName(label);
-    }
-
-    @Override
-    public void setDescription(String description) {
-        list.setToolTipText(description);
-    }
-
     private void addValue(Object value) {
         listModel.addElement(value);
     }

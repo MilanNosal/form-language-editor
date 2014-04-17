@@ -58,16 +58,6 @@ public class RealPanel extends AbstractAccessiblePanel<Double> {
 
     @Override
     public void reset() {
-        realFrmttdTxtfld.setValue("");
-    }
-
-    @Override
-    public void setLabel(String label) {
-        realFrmttdTxtfld.setName(label);
-    }
-
-    @Override
-    public void setDescription(String description) {
-        realFrmttdTxtfld.setToolTipText(description);
+        realFrmttdTxtfld.setValue(0.0);
     }
 }

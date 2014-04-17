@@ -24,14 +24,5 @@
 #foreach($property in $concept.properties)
         this.${property.name}.reset();
 #end
-    }
-
-    @Override
-    public void setLabel(String label) {
-        System.err.println("Setting label on $panelName is not supported.");
-    }
-
-    @Override
-    public void setDescription(String description) {
-        System.err.println("Setting description on $panelName is not supported.");
+        
     }

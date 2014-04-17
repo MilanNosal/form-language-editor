@@ -1,21 +1,15 @@
 
 public class $panelName extends yajco.fle.panels.ConcreteConceptPanelBase<$domainClass> {
 
-    // <editor-fold defaultstate="collapsed" desc="Properties declarations">
 #foreach ( $property in $concept.properties)
 #set( $file = $templatesDir + "body/properties/declarations/" + $property.getClass().getSimpleName() + ".vsl" )
 #parse( $file )
 #end
-    // </editor-fold>
 
-    // <editor-fold defaultstate="collapsed" desc="Concept panel constructor">
 #set( $file = $templatesDir + "body/properties/ConceptPanelConstructor.vsl" )
 #parse( $file )
-    // </editor-fold>
 
-    // <editor-fold defaultstate="collapsed" desc="PanelAccessor interface implementation (differs between abstract and concrete concepts)">
 #set( $file = $templatesDir + "body/properties/PanelAccessorImplementation.vsl" )
 #parse( $file )
-    // </editor-fold>
 
 }

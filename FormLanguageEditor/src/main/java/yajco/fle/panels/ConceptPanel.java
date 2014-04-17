@@ -47,14 +47,4 @@ public class ConceptPanel <T> extends AbstractAccessiblePanel<T> {
     public void reset() {
         directConceptPanel.reset();
     }
-
-    @Override
-    public void setLabel(String label) {
-        this.setName(label);
-    }
-
-    @Override
-    public void setDescription(String description) {
-        this.setToolTipText(description);
-    }
 }

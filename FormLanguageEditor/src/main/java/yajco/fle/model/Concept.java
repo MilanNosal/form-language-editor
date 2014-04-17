@@ -6,7 +6,7 @@ import java.io.Serializable;
  *
  * @author DeeL
  */
-public abstract class Concept extends BaseSourceElement<yajco.model.Concept> implements Serializable{
+public abstract class Concept extends BaseSourceElement<yajco.model.Concept> implements Serializable, Comparable<Concept> {
 
     private final String name;
 
@@ -23,5 +23,10 @@ public abstract class Concept extends BaseSourceElement<yajco.model.Concept> imp
 
     public String getClassName() {
         return className;
+    }
+
+    @Override
+    public int compareTo(Concept o) {
+        return name.compareTo(o.name);
     }
 }
