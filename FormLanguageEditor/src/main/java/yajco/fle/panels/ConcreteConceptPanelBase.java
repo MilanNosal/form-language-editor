@@ -1,14 +1,17 @@
 package yajco.fle.panels;
 
+import java.awt.Color;
+import java.awt.GridBagConstraints;
 import java.awt.Label;
+import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 
 /**
  *
  * @author Milan
- * @param <T> type 
+ * @param <T> type
  */
-public abstract class ConcreteConceptPanelBase <T> extends AbstractAccessiblePanel<T> {
+public abstract class ConcreteConceptPanelBase<T> extends AbstractAccessiblePanel<T> {
 
     /**
      * Creates new form ConceptPanelBase
@@ -16,10 +19,36 @@ public abstract class ConcreteConceptPanelBase <T> extends AbstractAccessiblePan
     public ConcreteConceptPanelBase() {
         initComponents();
     }
-    
+
     protected void addRowForProperty(String label, AbstractAccessiblePanel panel) {
-        add(new Label(label));
-        add(panel);
+        GridBagConstraints gridBagConstraints;
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.FIRST_LINE_START;
+        gridBagConstraints.weightx = 0.0;
+        //gridBagConstraints.gridy = 0;
+        add(new Label(label), gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.FIRST_LINE_START;
+        gridBagConstraints.weightx = 1.0;
+        panel.setBorder(BorderFactory.createLineBorder(Color.BLUE, 2));
+        add(panel, gridBagConstraints);
+        
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.FIRST_LINE_START;
+        gridBagConstraints.weightx = 0.0;
+        //gridBagConstraints.gridy = 0;
+        add(new Label("Pokus"), gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.FIRST_LINE_START;
+        gridBagConstraints.weightx = 1.0;
+        panel.setBorder(BorderFactory.createLineBorder(Color.BLUE, 2));
+        JPanel p = new JPanel();
+        p.setBorder(BorderFactory.createLineBorder(Color.BLUE, 2));
+        add(p, gridBagConstraints);
     }
 
     /**
@@ -31,7 +60,8 @@ public abstract class ConcreteConceptPanelBase <T> extends AbstractAccessiblePan
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setLayout(new java.awt.GridLayout(0, 2));
+        setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 51), 2));
+        setLayout(new java.awt.GridBagLayout());
     }// </editor-fold>//GEN-END:initComponents
 
 

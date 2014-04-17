@@ -8,21 +8,25 @@ import javax.swing.JPanel;
 public class ConceptDialog extends javax.swing.JDialog {
 
     private boolean okPressed = false;
-    private final PanelAccessor content;
+    private final AbstractAccessiblePanel content;
 
     public ConceptDialog(java.awt.Frame parent, AbstractAccessiblePanel content) {
         super(parent, true);
         initComponents();
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
         this.content = content;
 
-        contentPanel.add((JPanel)content);
+        contentPanel.add(content);
+        pack();
+        setLocationRelativeTo(parent);
     }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        scrollPane = new javax.swing.JScrollPane();
         contentPanel = new javax.swing.JPanel();
         buttonPanel = new javax.swing.JPanel();
         okButton = new javax.swing.JButton();
@@ -32,7 +36,9 @@ public class ConceptDialog extends javax.swing.JDialog {
         setModal(true);
 
         contentPanel.setLayout(new java.awt.BorderLayout());
-        getContentPane().add(contentPanel, java.awt.BorderLayout.CENTER);
+        scrollPane.setViewportView(contentPanel);
+
+        getContentPane().add(scrollPane, java.awt.BorderLayout.CENTER);
 
         okButton.setText("OK");
         okButton.addActionListener(new java.awt.event.ActionListener() {
@@ -80,12 +86,11 @@ public class ConceptDialog extends javax.swing.JDialog {
         );
 
         getContentPane().add(buttonPanel, java.awt.BorderLayout.SOUTH);
-
-        pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void okButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_okButtonActionPerformed
         okPressed = true;
+        setVisible(false);
     }//GEN-LAST:event_okButtonActionPerformed
 
     private void resetButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetButtonActionPerformed
@@ -107,5 +112,6 @@ public class ConceptDialog extends javax.swing.JDialog {
     private javax.swing.JPanel contentPanel;
     private javax.swing.JButton okButton;
     private javax.swing.JButton resetButton;
+    private javax.swing.JScrollPane scrollPane;
     // End of variables declaration//GEN-END:variables
 }
