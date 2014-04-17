@@ -23,13 +23,17 @@ public abstract class ConcreteConceptPanelBase<T> extends AbstractAccessiblePane
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.FIRST_LINE_START;
-        //gridBagConstraints.gridy = 0;
-        add(new JLabel(label), gridBagConstraints);
+        gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
+        JLabel jLabel = new JLabel(label);
+        jLabel.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        add(jLabel, gridBagConstraints);
+        
         panel.setToolTipText(label);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.FIRST_LINE_START;
         gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         add(panel, gridBagConstraints);
     }

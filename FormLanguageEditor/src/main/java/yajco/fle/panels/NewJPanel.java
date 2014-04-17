@@ -71,6 +71,7 @@ public class NewJPanel extends javax.swing.JPanel {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
+        gridBagConstraints.insets = new java.awt.Insets(2, 2, 2, 2);
         add(jButton2, gridBagConstraints);
 
         jLabel3.setText("jLabel3");
