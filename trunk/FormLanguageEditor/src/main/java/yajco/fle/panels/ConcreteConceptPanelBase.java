@@ -1,10 +1,7 @@
 package yajco.fle.panels;
 
-import java.awt.Color;
 import java.awt.GridBagConstraints;
 import java.awt.Label;
-import javax.swing.BorderFactory;
-import javax.swing.JPanel;
 
 /**
  *
@@ -25,30 +22,14 @@ public abstract class ConcreteConceptPanelBase<T> extends AbstractAccessiblePane
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.FIRST_LINE_START;
-        gridBagConstraints.weightx = 0.0;
         //gridBagConstraints.gridy = 0;
         add(new Label(label), gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.FIRST_LINE_START;
         gridBagConstraints.weightx = 1.0;
-        panel.setBorder(BorderFactory.createLineBorder(Color.BLUE, 2));
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         add(panel, gridBagConstraints);
-        
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.FIRST_LINE_START;
-        gridBagConstraints.weightx = 0.0;
-        //gridBagConstraints.gridy = 0;
-        add(new Label("Pokus"), gridBagConstraints);
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.FIRST_LINE_START;
-        gridBagConstraints.weightx = 1.0;
-        panel.setBorder(BorderFactory.createLineBorder(Color.BLUE, 2));
-        JPanel p = new JPanel();
-        p.setBorder(BorderFactory.createLineBorder(Color.BLUE, 2));
-        add(p, gridBagConstraints);
     }
 
     /**
@@ -60,7 +41,6 @@ public abstract class ConcreteConceptPanelBase<T> extends AbstractAccessiblePane
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 51), 2));
         setLayout(new java.awt.GridBagLayout());
     }// </editor-fold>//GEN-END:initComponents
 
