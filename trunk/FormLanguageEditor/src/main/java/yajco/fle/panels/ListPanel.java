@@ -41,6 +41,7 @@ public class ListPanel<T> extends AbstractAccessiblePanel<List<T>> {
         buttonPanel.setLayout(new javax.swing.BoxLayout(buttonPanel, javax.swing.BoxLayout.PAGE_AXIS));
 
         addBttn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/yajco/fle/panels/icons/add.png"))); // NOI18N
+        addBttn.setToolTipText("Add");
         addBttn.setBorderPainted(false);
         addBttn.setContentAreaFilled(false);
         addBttn.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -54,6 +55,7 @@ public class ListPanel<T> extends AbstractAccessiblePanel<List<T>> {
         buttonPanel.add(addBttn);
 
         editBttn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/yajco/fle/panels/icons/edit.png"))); // NOI18N
+        editBttn.setToolTipText("Edit");
         editBttn.setBorderPainted(false);
         editBttn.setContentAreaFilled(false);
         editBttn.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -67,6 +69,7 @@ public class ListPanel<T> extends AbstractAccessiblePanel<List<T>> {
         buttonPanel.add(editBttn);
 
         deleteBttn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/yajco/fle/panels/icons/delete.png"))); // NOI18N
+        deleteBttn.setToolTipText("Delete");
         deleteBttn.setBorderPainted(false);
         deleteBttn.setContentAreaFilled(false);
         deleteBttn.setMargin(new java.awt.Insets(0, 0, 0, 0));

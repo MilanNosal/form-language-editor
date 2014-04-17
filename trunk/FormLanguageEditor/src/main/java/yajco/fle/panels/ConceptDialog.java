@@ -59,21 +59,42 @@ public class ConceptDialog extends javax.swing.JDialog {
 
         getContentPane().add(scrollPane, java.awt.BorderLayout.CENTER);
 
-        okButton.setText("OK");
+        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/yajco/fle/panels/icons/ok.png"))); // NOI18N
+        okButton.setToolTipText("OK");
+        okButton.setBorderPainted(false);
+        okButton.setContentAreaFilled(false);
+        okButton.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/yajco/fle/panels/icons/ok_disabled.png"))); // NOI18N
+        okButton.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        okButton.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/yajco/fle/panels/icons/ok_pressed.png"))); // NOI18N
+        okButton.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/yajco/fle/panels/icons/ok_selected.png"))); // NOI18N
         okButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 okButtonActionPerformed(evt);
             }
         });
 
-        resetButton.setText("Reset");
+        resetButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/yajco/fle/panels/icons/refresh.png"))); // NOI18N
+        resetButton.setToolTipText("Reset");
+        resetButton.setBorderPainted(false);
+        resetButton.setContentAreaFilled(false);
+        resetButton.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/yajco/fle/panels/icons/refresh_disabled.png"))); // NOI18N
+        resetButton.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        resetButton.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/yajco/fle/panels/icons/refresh_pressed.png"))); // NOI18N
+        resetButton.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/yajco/fle/panels/icons/refresh_selected.png"))); // NOI18N
         resetButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 resetButtonActionPerformed(evt);
             }
         });
 
-        cancelButton.setText("Cancel");
+        cancelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/yajco/fle/panels/icons/cancel.png"))); // NOI18N
+        cancelButton.setToolTipText("Cancel");
+        cancelButton.setBorderPainted(false);
+        cancelButton.setContentAreaFilled(false);
+        cancelButton.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/yajco/fle/panels/icons/cancel_disabled.png"))); // NOI18N
+        cancelButton.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        cancelButton.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/yajco/fle/panels/icons/cancel_pressed.png"))); // NOI18N
+        cancelButton.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/yajco/fle/panels/icons/cancel_selected.png"))); // NOI18N
         cancelButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cancelButtonActionPerformed(evt);
@@ -85,7 +106,7 @@ public class ConceptDialog extends javax.swing.JDialog {
         buttonPanelLayout.setHorizontalGroup(
             buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, buttonPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(290, Short.MAX_VALUE)
                 .addComponent(okButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(resetButton)
