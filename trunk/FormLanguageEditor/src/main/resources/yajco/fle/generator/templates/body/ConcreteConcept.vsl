@@ -11,5 +11,11 @@ public class $panelName extends yajco.fle.panels.ConcreteConceptPanelBase<$domai
 
 #set( $file = $templatesDir + "body/properties/PanelAccessorImplementation.vsl" )
 #parse( $file )
+    
+    
+    @Override
+    public String getLabel() {
+        return "$concept.name";
+    }
 
 }

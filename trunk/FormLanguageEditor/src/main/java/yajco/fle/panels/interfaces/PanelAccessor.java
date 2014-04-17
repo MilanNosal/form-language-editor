@@ -1,4 +1,4 @@
-package yajco.fle.panels;
+package yajco.fle.panels.interfaces;
 
 public interface PanelAccessor<T> {
     public void setValue(T value);

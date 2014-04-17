@@ -4,13 +4,14 @@ import java.util.LinkedList;
 import java.util.List;
 import javax.swing.JDialog;
 import javax.swing.SwingUtilities;
+import yajco.fle.panels.interfaces.Labeled;
 
 /**
  *
  * @author Milan
  * @param <T>
  */
-public abstract class AbstractConceptPanelBase<T> extends AbstractAccessiblePanel<T> {
+public abstract class AbstractConceptPanelBase<T> extends AbstractAccessiblePanel<T> implements Labeled {
 
     /**
      * Creates new form AbstractConceptPanelBase

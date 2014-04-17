@@ -18,4 +18,9 @@ public class $panelName extends yajco.fle.panels.AbstractConceptPanelBase<$domai
         } #if( $velocityHasNext ) else #end
 #end
     }
+
+    @Override
+    public String getLabel() {
+        return "$concept.name";
+    }
 }
