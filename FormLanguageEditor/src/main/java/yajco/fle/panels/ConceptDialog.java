@@ -7,7 +7,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import javax.swing.JComponent;
 import javax.swing.KeyStroke;
-import javax.swing.SwingUtilities;
 import yajco.fle.panels.interfaces.Labeled;
 
 /**
@@ -26,6 +25,8 @@ public class ConceptDialog extends javax.swing.JDialog {
     public ConceptDialog(java.awt.Frame parent, AbstractAccessiblePanel content) {
         super(parent, true);
         initComponents();
+        //rootPane.setWindowDecorationStyle(JRootPane.FRAME);
+
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
         this.content = content;
@@ -48,9 +49,15 @@ public class ConceptDialog extends javax.swing.JDialog {
         rootPane.registerKeyboardAction(cancelListener,
                 KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_IN_FOCUSED_WINDOW);
 
+        //set title
         if (content instanceof Labeled) {
             this.setTitle(((Labeled) content).getLabel());
         }
+        
+        //set dialog move/resize adapter
+        new DialogResizeAdapter(this, topPanel, DialogResizeAdapter.Action.MOVE);
+        new DialogResizeAdapter(this, resizeRightPanel, DialogResizeAdapter.Action.RESIZE_RIGHT);
+        new DialogResizeAdapter(this, resizeLeftPanel, DialogResizeAdapter.Action.RESIZE_LEFT);
     }
 
     @Override
@@ -73,7 +80,8 @@ public class ConceptDialog extends javax.swing.JDialog {
         okButton = new javax.swing.JButton();
         resetButton = new javax.swing.JButton();
         cancelButton = new javax.swing.JButton();
-        resizePanel = new javax.swing.JLabel();
+        resizeRightPanel = new javax.swing.JLabel();
+        resizeLeftPanel = new javax.swing.JLabel();
 
         setModal(true);
         setUndecorated(true);
@@ -82,16 +90,6 @@ public class ConceptDialog extends javax.swing.JDialog {
         jPanel1.setLayout(new java.awt.BorderLayout());
 
         topPanel.setBackground(new java.awt.Color(0, 0, 0));
-        topPanel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                topPanelMousePressed(evt);
-            }
-        });
-        topPanel.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseDragged(java.awt.event.MouseEvent evt) {
-                topPanelMouseDragged(evt);
-            }
-        });
 
         titleLabel.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         titleLabel.setForeground(new java.awt.Color(255, 255, 255));
@@ -176,17 +174,9 @@ public class ConceptDialog extends javax.swing.JDialog {
             }
         });
 
-        resizePanel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/yajco/fle/panels/icons/resize.png"))); // NOI18N
-        resizePanel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                resizePanelMousePressed(evt);
-            }
-        });
-        resizePanel.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseDragged(java.awt.event.MouseEvent evt) {
-                resizePanelMouseDragged(evt);
-            }
-        });
+        resizeRightPanel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/yajco/fle/panels/icons/resize_right.png"))); // NOI18N
+
+        resizeLeftPanel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/yajco/fle/panels/icons/resize_left.png"))); // NOI18N
 
         javax.swing.GroupLayout buttonPanelLayout = new javax.swing.GroupLayout(buttonPanel);
         buttonPanel.setLayout(buttonPanelLayout);
@@ -201,19 +191,23 @@ public class ConceptDialog extends javax.swing.JDialog {
                 .addComponent(cancelButton)
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, buttonPanelLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(resizePanel))
+                .addComponent(resizeLeftPanel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(resizeRightPanel))
         );
         buttonPanelLayout.setVerticalGroup(
             buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(buttonPanelLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(okButton)
-                    .addComponent(resetButton)
-                    .addComponent(cancelButton))
-                .addGap(3, 3, 3)
-                .addComponent(resizePanel))
+                .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, buttonPanelLayout.createSequentialGroup()
+                        .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(okButton)
+                            .addComponent(resetButton)
+                            .addComponent(cancelButton))
+                        .addGap(3, 3, 3)
+                        .addComponent(resizeRightPanel))
+                    .addComponent(resizeLeftPanel, javax.swing.GroupLayout.Alignment.TRAILING)))
         );
 
         jPanel1.add(buttonPanel, java.awt.BorderLayout.PAGE_END);
@@ -234,30 +228,6 @@ public class ConceptDialog extends javax.swing.JDialog {
         setVisible(false);
     }//GEN-LAST:event_cancelButtonActionPerformed
 
-    private void topPanelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_topPanelMousePressed
-        lastPoint = evt.getPoint();
-        lastPosition = getLocation();
-        SwingUtilities.convertPointToScreen(lastPoint, evt.getComponent());
-    }//GEN-LAST:event_topPanelMousePressed
-
-    private void topPanelMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_topPanelMouseDragged
-        Point point = evt.getPoint();
-        SwingUtilities.convertPointToScreen(point, evt.getComponent());
-        setLocation(lastPosition.x - lastPoint.x + point.x, lastPosition.y - lastPoint.y + point.y);
-    }//GEN-LAST:event_topPanelMouseDragged
-
-    private void resizePanelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_resizePanelMousePressed
-        lastPoint = evt.getPoint();
-        lastDimension = getSize();
-        SwingUtilities.convertPointToScreen(lastPoint, evt.getComponent());
-    }//GEN-LAST:event_resizePanelMousePressed
-
-    private void resizePanelMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_resizePanelMouseDragged
-        Point point = evt.getPoint();
-        SwingUtilities.convertPointToScreen(point, evt.getComponent());
-        setSize(new Dimension(lastDimension.width - lastPoint.x + point.x, lastDimension.height - lastPoint.y + point.y));
-    }//GEN-LAST:event_resizePanelMouseDragged
-
     public boolean showDialog() {
         setVisible(true);
         return okPressed;
@@ -271,7 +241,8 @@ public class ConceptDialog extends javax.swing.JDialog {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton okButton;
     private javax.swing.JButton resetButton;
-    private javax.swing.JLabel resizePanel;
+    private javax.swing.JLabel resizeLeftPanel;
+    private javax.swing.JLabel resizeRightPanel;
     private javax.swing.JScrollPane scrollPane;
     private javax.swing.JLabel titleLabel;
     private javax.swing.JPanel topPanel;
