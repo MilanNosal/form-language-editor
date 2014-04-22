@@ -146,14 +146,14 @@ public class ConceptDialog extends javax.swing.JDialog {
             }
         });
 
-        resetButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/yajco/fle/panels/icons/refresh.png"))); // NOI18N
+        resetButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/yajco/fle/panels/icons/reset.png"))); // NOI18N
         resetButton.setToolTipText("Reset");
         resetButton.setBorderPainted(false);
         resetButton.setContentAreaFilled(false);
-        resetButton.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/yajco/fle/panels/icons/refresh_disabled.png"))); // NOI18N
+        resetButton.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/yajco/fle/panels/icons/reset_disabled.png"))); // NOI18N
         resetButton.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        resetButton.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/yajco/fle/panels/icons/refresh_pressed.png"))); // NOI18N
-        resetButton.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/yajco/fle/panels/icons/refresh_selected.png"))); // NOI18N
+        resetButton.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/yajco/fle/panels/icons/reset_pressed.png"))); // NOI18N
+        resetButton.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/yajco/fle/panels/icons/reset_selected.png"))); // NOI18N
         resetButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 resetButtonActionPerformed(evt);

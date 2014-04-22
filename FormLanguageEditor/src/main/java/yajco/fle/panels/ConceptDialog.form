@@ -204,22 +204,22 @@
             <Component class="javax.swing.JButton" name="resetButton">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/yajco/fle/panels/icons/refresh.png"/>
+                  <Image iconType="3" name="/yajco/fle/panels/icons/reset.png"/>
                 </Property>
                 <Property name="toolTipText" type="java.lang.String" value="Reset"/>
                 <Property name="borderPainted" type="boolean" value="false"/>
                 <Property name="contentAreaFilled" type="boolean" value="false"/>
                 <Property name="disabledIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/yajco/fle/panels/icons/refresh_disabled.png"/>
+                  <Image iconType="3" name="/yajco/fle/panels/icons/reset_disabled.png"/>
                 </Property>
                 <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
                   <Insets value="[0, 0, 0, 0]"/>
                 </Property>
                 <Property name="pressedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/yajco/fle/panels/icons/refresh_pressed.png"/>
+                  <Image iconType="3" name="/yajco/fle/panels/icons/reset_pressed.png"/>
                 </Property>
                 <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/yajco/fle/panels/icons/refresh_selected.png"/>
+                  <Image iconType="3" name="/yajco/fle/panels/icons/reset_selected.png"/>
                 </Property>
               </Properties>
               <Events>
