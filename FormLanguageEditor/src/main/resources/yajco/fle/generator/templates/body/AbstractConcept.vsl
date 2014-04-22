@@ -20,6 +20,13 @@ public class $panelName extends yajco.fle.panels.AbstractConceptPanelBase<$domai
     }
 
     @Override
+    public $domainClass getValue() {
+        int selected = conceptsComboBox.getSelectedIndex();
+        $domainClass value = panels.get(selected).getValue();
+        return value;
+    }
+
+    @Override
     public String getLabel() {
         return "$concept.name";
     }

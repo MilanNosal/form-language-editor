@@ -1,2 +1,2 @@
     private final yajco.fle.panels.AbstractAccessiblePanel<$property.getTypeName()> $property.name
-                                = new yajco.fle.panels.ReferencePanel<$property.getTypeName()>();
+                                = new yajco.fle.panels.ReferencePanel<$property.getTypeName()>(${property.getTypeName()}.class);
