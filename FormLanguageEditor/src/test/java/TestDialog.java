@@ -38,6 +38,7 @@ public class TestDialog {
         }
         ConceptDialog cd = new ConceptDialog(null, new generated.ModelPanel());
         //cd.setDefaultCloseOperation(JDialog.EXIT_ON_CLOSE);
+        cd.setPrinterPanel(new generated.PrinterPanelImpl());
         cd.showDialog();
     }
 

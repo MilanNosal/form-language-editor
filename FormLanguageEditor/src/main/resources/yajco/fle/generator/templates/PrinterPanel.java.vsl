@@ -1,0 +1,25 @@
+## Printer Panel - connecting to YAJCo pretty printer parser generator
+#set( $mainConceptClassName = ${language.getMainConcept().getClassName()} )
+#set( $fullPrinterClassName = ${mainConceptClassName.substring(0,${mainConceptClassName.lastIndexOf(".")})} + "." + ${printerSubpackage} + "." + ${printerClass} )
+package $package;
+
+public class $printerPanelImplClassName extends yajco.fle.panels.printer.PrinterPanel {
+    protected void printToWriter(Object o, java.io.PrintWriter writer) {
+        try {
+            Class printerClass = Class.forName("${fullPrinterClassName}");
+            Object printer = printerClass.newInstance();
+            printerClass.getMethod("print", Object.class, java.io.PrintWriter.class).invoke(printer, o, writer);
+
+            //povodny pristup
+            //${fullPrinterClassName} printer = new ${fullPrinterClassName}();
+            //printer.print(o, writer);
+ 
+        } catch (ClassNotFoundException ex) {
+            throw new RuntimeException("Printer is not existing, please generate printer as class ${fullPrinterClassName}",ex);
+        } catch (NoSuchMethodException ex) {
+            throw new RuntimeException("Class ${fullPrinterClassName} does not have method print(Object,PrintWriter)",ex);
+        } catch (ReflectiveOperationException ex) {
+            throw new RuntimeException(ex);
+        }
+    }
+}

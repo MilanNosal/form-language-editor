@@ -18,10 +18,12 @@
         @Skip("\\n"),
         @Skip("\\r"),
         @Skip("#.*")
-    }
+    },
+    options = {@Option(name = "yajco.generateTools", value = "printer")}
 )
 package sk.tuke.magsa.tools.metamodel;
 
+import yajco.annotation.config.Option;
 import yajco.annotation.config.Parser;
 import yajco.annotation.config.TokenDef;
 import yajco.annotation.config.Skip;
