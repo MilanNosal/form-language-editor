@@ -6,6 +6,7 @@ import javax.swing.DefaultListModel;
 import javax.swing.ListSelectionModel;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
+import yajco.fle.panels.references.ConceptInstanceLookup;
 
 /** *  @author Michaela Bačíková
  * @param <T> type of the list item*/
@@ -123,23 +124,29 @@ public class ListPanel<T> extends AbstractAccessiblePanel<List<T>> {
         boolean okPressed = new ConceptDialog(null, editPanel).showDialog();
         if(okPressed) {
             Object value = editPanel.getValue();
+            
             addValue(value);
         }
     }//GEN-LAST:event_addBttnActionPerformed
 
     private void editBttnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editBttnActionPerformed
-        editPanel.setValue(getSelectedItem());
+        T oldValue = getSelectedItem();
+        editPanel.setValue(oldValue);
         boolean okPressed = new ConceptDialog(null, editPanel).showDialog();
         
         if(okPressed) {
+            ConceptInstanceLookup.getInstance().unregisterConceptInstance(oldValue);
             int index = list.getSelectedIndex();
             T newValue = editPanel.getValue();
             listModel.set(index, newValue);
+            ConceptInstanceLookup.getInstance().registerConceptInstance(newValue);
         }
     }//GEN-LAST:event_editBttnActionPerformed
 
     private void deleteBttnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteBttnActionPerformed
-        listModel.removeElement(getSelectedItem());
+        Object value = getSelectedItem();
+        listModel.removeElement(value);
+        ConceptInstanceLookup.getInstance().unregisterConceptInstance(value);
     }//GEN-LAST:event_deleteBttnActionPerformed
 
 
@@ -178,6 +185,8 @@ public class ListPanel<T> extends AbstractAccessiblePanel<List<T>> {
 
     private void addValue(Object value) {
         listModel.addElement(value);
+        // register to context
+        ConceptInstanceLookup.getInstance().registerConceptInstance(value);
     }
     
     private T getSelectedItem() {

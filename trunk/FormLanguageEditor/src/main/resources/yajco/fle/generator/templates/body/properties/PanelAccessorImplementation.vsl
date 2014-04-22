@@ -7,16 +7,22 @@
 
     @Override
     public $domainClass getValue() {
-        return new $domainClass(
+        $domainClass value = new $domainClass(
 #foreach($property in $concept.properties)
-#if ($property.getClass().getSimpleName().equals("ReferenceProperty") )
-                    null#if($velocityHasNext),#end
-#else
+#if (!$property.getClass().getSimpleName().equals("ReferenceProperty") )
                     this.${property.name}.getValue()#if($velocityHasNext),#end
+#else
+                    this.${property.name}.getValue().get${generator.toUCIdent($property.refId.name)}()#if($velocityHasNext),#end
 #end
 
 #end
         );
+#foreach($property in $concept.properties)
+#if ($property.getClass().getSimpleName().equals("ReferenceProperty") )
+        value.set${generator.toUCIdent($property.name)}(this.${property.name}.getValue());
+#end
+#end
+        return value;
     }
 
     @Override

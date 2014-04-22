@@ -5,6 +5,7 @@ import java.util.List;
 import javax.swing.JDialog;
 import javax.swing.SwingUtilities;
 import yajco.fle.panels.interfaces.Labeled;
+import yajco.fle.panels.references.ConceptInstanceLookup;
 
 /**
  *
@@ -75,12 +76,6 @@ public abstract class AbstractConceptPanelBase<T> extends AbstractAccessiblePane
     protected javax.swing.JComboBox conceptsComboBox;
     private javax.swing.JPanel contentPanel;
     // End of variables declaration//GEN-END:variables
-
-    @Override
-    public T getValue() {
-        int selected = conceptsComboBox.getSelectedIndex();
-        return panels.get(selected).getValue();
-    }
 
     @Override
     public void reset() {
