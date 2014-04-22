@@ -1,7 +1,5 @@
 package yajco.fle.panels;
 
-import java.awt.Dimension;
-import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -13,11 +11,6 @@ import yajco.fle.panels.interfaces.Labeled;
  * @author Michaela Bačíková
  */
 public class ConceptDialog extends javax.swing.JDialog {
-
-    private Point lastPoint, lastPosition;
-
-    private Dimension lastDimension;
-
     private boolean okPressed = false;
 
     private final AbstractAccessiblePanel content;
