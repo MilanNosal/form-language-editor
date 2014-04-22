@@ -1,5 +1,6 @@
 package yajco.fle.panels;
 
+import java.awt.Cursor;
 import java.awt.Dimension;
 import java.awt.Point;
 import java.awt.event.MouseEvent;
@@ -30,6 +31,18 @@ public class DialogResizeAdapter implements MouseListener, MouseMotionListener {
 
         actionComponent.addMouseListener(this);
         actionComponent.addMouseMotionListener(this);
+
+        switch (action) {
+            case MOVE:
+                actionComponent.setCursor(Cursor.getPredefinedCursor(Cursor.MOVE_CURSOR));
+                break;
+            case RESIZE_RIGHT:
+                actionComponent.setCursor(Cursor.getPredefinedCursor(Cursor.SE_RESIZE_CURSOR));
+                break;
+            case RESIZE_LEFT:
+                actionComponent.setCursor(Cursor.getPredefinedCursor(Cursor.SW_RESIZE_CURSOR));
+                break;
+        }
     }
 
     @Override
