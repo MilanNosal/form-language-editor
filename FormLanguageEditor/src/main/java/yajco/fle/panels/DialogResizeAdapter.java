@@ -3,11 +3,11 @@ package yajco.fle.panels;
 import java.awt.Cursor;
 import java.awt.Dimension;
 import java.awt.Point;
+import java.awt.Window;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import javax.swing.JComponent;
-import javax.swing.JDialog;
 import javax.swing.SwingUtilities;
 
 public class DialogResizeAdapter implements MouseListener, MouseMotionListener {
@@ -17,7 +17,7 @@ public class DialogResizeAdapter implements MouseListener, MouseMotionListener {
         MOVE, RESIZE_RIGHT, RESIZE_LEFT
     }
 
-    private final JDialog dialog;
+    private final Window window;
 
     private final Action action;
 
@@ -25,8 +25,8 @@ public class DialogResizeAdapter implements MouseListener, MouseMotionListener {
 
     private Dimension lastDimension;
 
-    public DialogResizeAdapter(JDialog dialog, JComponent actionComponent, Action action) {
-        this.dialog = dialog;
+    public DialogResizeAdapter(Window dialog, JComponent actionComponent, Action action) {
+        this.window = dialog;
         this.action = action;
 
         actionComponent.addMouseListener(this);
@@ -48,8 +48,8 @@ public class DialogResizeAdapter implements MouseListener, MouseMotionListener {
     @Override
     public void mousePressed(MouseEvent evt) {
         lastPoint = evt.getPoint();
-        lastPosition = dialog.getLocation();
-        lastDimension = dialog.getSize();
+        lastPosition = window.getLocation();
+        lastDimension = window.getSize();
         SwingUtilities.convertPointToScreen(lastPoint, evt.getComponent());
     }
 
@@ -62,14 +62,14 @@ public class DialogResizeAdapter implements MouseListener, MouseMotionListener {
 
         switch (action) {
             case MOVE:
-                dialog.setLocation(lastPosition.x + xDelta, lastPosition.y + yDelta);
+                window.setLocation(lastPosition.x + xDelta, lastPosition.y + yDelta);
                 break;
             case RESIZE_RIGHT:
-                dialog.setSize(new Dimension(lastDimension.width + xDelta, lastDimension.height + yDelta));
+                window.setSize(new Dimension(lastDimension.width + xDelta, lastDimension.height + yDelta));
                 break;
             case RESIZE_LEFT:
-                dialog.setLocation(lastPosition.x + xDelta, lastPosition.y);
-                dialog.setSize(new Dimension(lastDimension.width - xDelta, lastDimension.height + yDelta));
+                window.setLocation(lastPosition.x + xDelta, lastPosition.y);
+                window.setSize(new Dimension(lastDimension.width - xDelta, lastDimension.height + yDelta));
                 break;
         }
     }
