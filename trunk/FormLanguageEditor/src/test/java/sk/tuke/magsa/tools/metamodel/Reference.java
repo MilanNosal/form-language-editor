@@ -2,6 +2,7 @@ package sk.tuke.magsa.tools.metamodel;
 
 import yajco.annotation.Before;
 import yajco.annotation.Token;
+import yajco.annotation.printer.NewLine;
 import yajco.annotation.reference.References;
 
 public class Reference {
@@ -9,6 +10,7 @@ public class Reference {
 
     private Entity to;
 
+    @NewLine
     @Before("reference")
     public Reference(
             @References(value = Entity.class, field = "from") @Token("NAME") String from,

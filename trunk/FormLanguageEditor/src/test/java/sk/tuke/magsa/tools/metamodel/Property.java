@@ -6,6 +6,8 @@ import sk.tuke.magsa.tools.metamodel.constraints.Constraint;
 import yajco.annotation.Before;
 import yajco.annotation.Exclude;
 import yajco.annotation.Separator;
+import yajco.annotation.printer.Indent;
+import yajco.annotation.printer.NewLine;
 import yajco.annotation.reference.Identifier;
 
 public class Property implements Named {
@@ -16,6 +18,7 @@ public class Property implements Named {
 
     private List<Constraint> constraints;
 
+    @NewLine @Indent
     public Property(String name,
             @Before(":") Type type,
             @Separator(",") List<Constraint> constraints) {

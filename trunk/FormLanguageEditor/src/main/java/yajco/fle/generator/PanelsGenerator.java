@@ -24,13 +24,19 @@ import yajco.fle.model.properties.ListProperty;
 import yajco.fle.model.properties.primitives.IntegerProperty;
 import yajco.fle.model.properties.primitives.StringProperty;
 import yajco.generator.FilesGenerator;
+import yajco.generator.annotation.DependsOn;
 import yajco.model.Language;
 
 /**
  *
  * @author DeeL
  */
+@DependsOn("yajco.generator.printergen.PrettyPrinterGenerator")
 public class PanelsGenerator implements FilesGenerator {
+
+    protected static final String PACKAGE_NAME = "generated";
+    protected static final String PRINTER_PANEL_TEMPLATE = "PrinterPanel.java.vsl";
+    protected static final String PRINTER_PANEL_CLASS_NAME = "PrinterPanelImpl";
 
     public static void main(String[] args) {
         new PanelsGenerator().generateFiles(null, null, null);
@@ -42,26 +48,40 @@ public class PanelsGenerator implements FilesGenerator {
         yajco.fle.model.Language lang = YajcoModelToLocalModelTransformator.transform(language);
 
         try {
+            Map<String, Object> params = new HashMap<>();
+            params.put("generator", this);
+            params.put("package", PACKAGE_NAME);
+            params.put("printerPanelImplClassName", PRINTER_PANEL_CLASS_NAME);
+            params.put("language", lang);
+            
             String path = TEMPLATE_PACKAGE + "/" + template + ".java.vsl";
 //            File dirs = new File("src/main/java/generated");
 //            dirs.mkdirs();
             for (Concept concept : lang.getConcepts()) {
                 //File wrt = new File("src/main/java/generated/" + concept.getName() + "Panel.java");
-                String className = "generated."+concept.getName() + "Panel";
+                String className = PACKAGE_NAME + "." + concept.getName() + "Panel";
                 JavaFileObject jfo = filer.createSourceFile(className);
                 //wrt.createNewFile();
                 try ( //InputStreamReader reader = new InputStreamReader(new FileInputStream(path), "utf-8");
                         InputStreamReader reader = new InputStreamReader(language.getClass().getResourceAsStream(path), "utf-8");
                         Writer writer = new BufferedWriter(jfo.openWriter())) {
-                    Map<String, Object> params = new HashMap<>();
+                    
                     VelocityContext context = new VelocityContext(params);
-
-                    context.put("generator", this);
+                    
                     context.put("concept", concept);
-                    context.put("package", "generated");
                     velocityEngine.evaluate(context, writer, "", reader);
                 }
             }
+
+            JavaFileObject jfo = filer.createSourceFile(PACKAGE_NAME + "." + PRINTER_PANEL_CLASS_NAME);
+            try (InputStreamReader reader = new InputStreamReader(language.getClass().getResourceAsStream(TEMPLATE_PACKAGE + "/" + PRINTER_PANEL_TEMPLATE), "utf-8");
+                    Writer writer = new BufferedWriter(jfo.openWriter())) {
+                VelocityContext context = new VelocityContext(params);
+                context.put("printerClass", yajco.generator.printergen.PrettyPrinterGenerator.PRINTER_CLASS_NAME);
+                context.put("printerSubpackage", yajco.generator.printergen.PrettyPrinterGenerator.PRINTER_PACKAGE);
+                velocityEngine.evaluate(context, writer, "", reader);
+            }
+
         } catch (IOException e) {
             throw new RuntimeException("Cannot generate output.", e);
         }

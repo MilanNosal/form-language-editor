@@ -6,6 +6,8 @@ import java.util.List;
 import yajco.annotation.After;
 import yajco.annotation.Before;
 import yajco.annotation.Range;
+import yajco.annotation.printer.Indent;
+import yajco.annotation.printer.NewLine;
 import yajco.annotation.reference.Identifier;
 
 public class Entity implements Named {
@@ -16,6 +18,7 @@ public class Entity implements Named {
 
     private final List<Reference> outgoingReferences = new ArrayList<Reference>();
 
+    @NewLine 
     @Before("entity")
     public Entity(String name,
             @Before("{") @After("}") @Range(minOccurs = 1) List<Property> properties) {
