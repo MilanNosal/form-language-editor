@@ -3,8 +3,5 @@
 #set( $domainClass = ${concept.className} )
 package $package;
 
-#set( $file = $templatesDir + "imports/Imports.vsl" )
-#parse( $file )
-
 #set( $file = $templatesDir + "body/" + $concept.getClass().getSimpleName() + ".vsl" )
 #parse( $file )

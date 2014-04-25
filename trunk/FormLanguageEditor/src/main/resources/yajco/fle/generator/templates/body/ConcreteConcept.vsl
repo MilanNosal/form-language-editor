@@ -1,7 +1,7 @@
 
 public class $panelName extends yajco.fle.panels.ConcreteConceptPanelBase<$domainClass> {
 
-#foreach ( $property in $concept.properties)
+#foreach ( $property in $concept.properties )
 #set( $file = $templatesDir + "body/properties/declarations/" + $property.getClass().getSimpleName() + ".vsl" )
 #parse( $file )
 #end
@@ -12,10 +12,13 @@ public class $panelName extends yajco.fle.panels.ConcreteConceptPanelBase<$domai
 #set( $file = $templatesDir + "body/properties/PanelAccessorImplementation.vsl" )
 #parse( $file )
     
-    
     @Override
     public String getLabel() {
         return "$concept.name";
     }
 
+#foreach ( $reference in $generator.getUniqueReferenceProperties($concept) )
+#set( $file = $templatesDir + "body/references/ReferenceModel.vsl" )
+#parse( $file )
+#end
 }
