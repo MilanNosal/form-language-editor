@@ -1,2 +1,4 @@
+#set ( $referenceModelName = $generator.toUCIdent(${property.concept.name}) + $generator.toUCIdent(${property.refId.name}) )
     private final yajco.fle.panels.AbstractAccessiblePanel<$property.getTypeName()> $property.name
-                                = new yajco.fle.panels.ReferencePanel<$property.getTypeName()>(${property.getTypeName()}.class);
+                                = new yajco.fle.panels.ReferencePanel<$property.getTypeName()>(
+                                                    new ${referenceModelName}ReferenceModel(${property.getTypeName()}.class));

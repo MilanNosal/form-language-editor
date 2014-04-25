@@ -1,0 +1,13 @@
+#set ( $referenceModelName = $generator.toUCIdent(${reference.concept.name}) + $generator.toUCIdent(${reference.refId.name}) )
+    private static class ${referenceModelName}ReferenceModel
+                            extends yajco.fle.panels.references.ReferenceModel<${reference.concept.className}> {
+        
+        public ${referenceModelName}ReferenceModel(Class<${reference.concept.className}> concept) {
+            super(concept);
+        }
+
+        @Override
+        public String getElementAt(int index) {
+            return "$generator.toUCIdent(${reference.concept.name}) " + this.getValueAt(index).get${generator.toUCIdent($reference.refId.name)}();
+        }
+    }

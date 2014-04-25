@@ -4,9 +4,9 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Writer;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
@@ -19,10 +19,7 @@ import yajco.fle.generator.transform.YajcoModelToLocalModelTransformator;
 import yajco.fle.model.Concept;
 import yajco.fle.model.ConcreteConcept;
 import yajco.fle.model.Property;
-import yajco.fle.model.properties.ConceptProperty;
-import yajco.fle.model.properties.ListProperty;
-import yajco.fle.model.properties.primitives.IntegerProperty;
-import yajco.fle.model.properties.primitives.StringProperty;
+import yajco.fle.model.properties.ReferenceProperty;
 import yajco.generator.FilesGenerator;
 import yajco.generator.annotation.DependsOn;
 import yajco.model.Language;
@@ -53,21 +50,12 @@ public class PanelsGenerator implements FilesGenerator {
             params.put("package", PACKAGE_NAME);
             params.put("printerPanelImplClassName", PRINTER_PANEL_CLASS_NAME);
             params.put("language", lang);
-            
-            String path = TEMPLATE_PACKAGE + "/" + template + ".java.vsl";
-//            File dirs = new File("src/main/java/generated");
-//            dirs.mkdirs();
+
             for (Concept concept : lang.getConcepts()) {
-                //File wrt = new File("src/main/java/generated/" + concept.getName() + "Panel.java");
-                String className = PACKAGE_NAME + "." + concept.getName() + "Panel";
-                JavaFileObject jfo = filer.createSourceFile(className);
-                //wrt.createNewFile();
-                try ( //InputStreamReader reader = new InputStreamReader(new FileInputStream(path), "utf-8");
-                        InputStreamReader reader = new InputStreamReader(language.getClass().getResourceAsStream(path), "utf-8");
+                JavaFileObject jfo = filer.createSourceFile(PACKAGE_NAME + "." + concept.getName() + "Panel");
+                try (InputStreamReader reader = new InputStreamReader(language.getClass().getResourceAsStream(TEMPLATE_PACKAGE + "/" + CONCEPT_TEMPLATE), "utf-8");
                         Writer writer = new BufferedWriter(jfo.openWriter())) {
-                    
                     VelocityContext context = new VelocityContext(params);
-                    
                     context.put("concept", concept);
                     velocityEngine.evaluate(context, writer, "", reader);
                 }
@@ -117,38 +105,24 @@ public class PanelsGenerator implements FilesGenerator {
         String propSimpleName = property.getClass().getSimpleName();
         return propSimpleName.substring(0, propSimpleName.length() - 8);
     }
+    
+    public Set<ReferenceProperty> getUniqueReferenceProperties(ConcreteConcept concept) {
+        Set<ReferenceProperty> references = new HashSet<>();
+        for(Property property : concept.getProperties()) {
+            if(property instanceof ReferenceProperty) {
+                references.add((ReferenceProperty) property);
+            }
+        }
+        return references;
+    }
 
     public PanelsGenerator() {
     }
 
-    private yajco.fle.model.Language createDummy() {
-        List<Property> properties = new ArrayList<>();
-        properties.add(new IntegerProperty("min"));
-        properties.add(new IntegerProperty("max"));
-        Concept constraint = new ConcreteConcept("Constraint", "prototyped.model.Constraint", properties);
-
-        properties = new ArrayList<>();
-        properties.add(new StringProperty("name"));
-        properties.add(new ConceptProperty("constraint", constraint));
-        Concept property = new ConcreteConcept("Property", "prototyped.model.Property", properties);
-
-        properties = new ArrayList<>();
-        properties.add(new StringProperty("name"));
-        properties.add(new ListProperty("properties", property));
-        Concept entity = new ConcreteConcept("Entity", "prototyped.model.Entity", properties);
-
-        List<Concept> concepts = new ArrayList<>();
-        concepts.add(entity);
-        concepts.add(property);
-        concepts.add(constraint);
-
-        return new yajco.fle.model.Language(concepts);
-    }
-
     protected static final String VELOCITY_PROPERTIES_FILE = "/velocity.properties";
     protected static final String TEMPLATE_PACKAGE = "/yajco/fle/generator/templates";
-    protected static VelocityEngine velocityEngine;
-    protected final String template = "Concept";
+    protected static final VelocityEngine velocityEngine;
+    protected static final String CONCEPT_TEMPLATE = "Concept.java.vsl";
 
     static {
         try {
